@@ -53,6 +53,9 @@ body.top .top_recruit__body{
 }
 }
 @media (max-width: 767px) {
+  .site_header.-scrolled .site_header__id_inner h2 {
+    display: block;
+  }
   .global_nav__list__item_case .global_nav__child_list__item:last-child a{
     height: 45px;
   }
@@ -86,5 +89,8 @@ body.top .top_recruit__body{
   }
   .top_company__body .col_sm_6:last-child {
     display: none;
+  }
+  body.top .top_about__desc {
+    text-align: center;
   }
 }
