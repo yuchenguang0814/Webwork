@@ -1,3 +1,7 @@
+:root {
+  --color-blue: #3c77a0;
+  --color-blue-hover: skyblue;
+}
 .site_header__id_inner h2{
   margin: 0;
   padding-left: 15px;
@@ -19,10 +23,20 @@
 .top_about .contact_cv__footer {
   margin-top: 30px;
 }
+.contact_cv__phone__openhour {
+  padding-left: 5px;
+}
+body.top .top_recruit__body{
+  padding: 10px;
+  height: 400px;
+}
+.site_footer__list p {
+  padding: 0 20px;
+}
+.site_footer__list h2 {
+  font-weight: 700;
+}
 @media (min-width: 800px) {
-  .global_nav__list__item {
-    padding-top: 10px;
-  }
   .site_header__id__label {
     padding-left: 15px;
   }
@@ -34,8 +48,20 @@
     height: 40px;
     width: auto;
   }
+  .global_nav__list__item.-current::after {
+    opacity: 1;
+}
 }
 @media (max-width: 767px) {
+  .global_nav__list__item_case .global_nav__child_list__item:last-child a{
+    height: 45px;
+  }
+  .global_nav__list__item_case .global_nav__child_list__item:last-child .link_case__label {
+    font-size: 1.4rem;
+  }
+  .top_product__body .tab__body {
+    display: none;
+  }
   .site_header__id_inner {
     height: 45px;
   }
@@ -54,5 +80,11 @@
   }
   body.top .top_visual__content__lead {
     text-align: center;
+  }
+  body.top .top_info {
+    margin-bottom: 40px;
+  }
+  .top_company__body .col_sm_6:last-child {
+    display: none;
   }
 }
