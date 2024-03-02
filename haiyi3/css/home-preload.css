@@ -1,0 +1,19 @@
+@charset "UTF-8";
+
+html::after {
+	content: "";
+	background-image: url(../img/home/biz_service@2x.png),
+	url(../img/home/biz_work@2x.png),
+	url(../img/home/recruit-welfare-l@2x.jpg),
+	url(../img/home/recruit-welfare-r@2x.jpg),
+	url(../img/home/recruit-message-l@2x.jpg),
+	url(../img/home/recruit-message-r@2x.jpg),
+	url(../img/home/recruit-recruitment-l@2x.jpg),
+	url(../img/home/recruit-recruitment-r@2x.jpg),;
+}
+
+@media screen and (max-width:1240px) {
+}
+
+@media screen and (max-width:768px) {
+}

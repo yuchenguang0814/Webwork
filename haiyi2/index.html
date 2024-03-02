@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <link href="./css/munion-css-pc.css" rel="stylesheet" />
+    <script src="./js/munion-js-pc.js" defer></script>
+    <script src="./js/jquery.min.js"></script>
+    <link href="./css/munion-web.css" rel="stylesheet" />
+    <link href="./css/css2.css" rel="stylesheet" />
+    <script src="./js/moblenav.js" defer></script>
+  </head>
+
+  <body>
+    <!-- header start -->
+    <header id="header" class="header">
+      <div class="header-top">
+        <div class="container-xl">
+          <div class="row no-gutters">
+            <div class="col-md-3 d-flex align-items-center logo">
+              <a href="/"
+                ><img
+                  src="./images/logo.png"
+                  alt="logo"
+                  class="img-fluid m-auto"
+              /></a>
+            </div>
+            <div class="col-md-9">
+              <div class="nav">
+                <nav class="navbar navbar-custom navbar-expand-lg">
+                  <div class="collapse navbar-collapse" id="header-nav">
+                    <ul class="navbar-nav">
+                      <li class="nav-item">
+                        <a href="/" class="nav-link">首页</a>
+                      </li>
+                      <li class="nav-item dropdown pc">
+                        <a
+                          href="./images/logo.png"
+                          class="nav-link dropdown-toggle"
+                          >产品</a
+                        >
+                        <ul class="dropdown-menu">
+                          <li>
+                            <a href="./products.html" class="dropdown-item"
+                              >产品分类1</a
+                            >
+                          </li>
+                          <li>
+                            <a href="./products.html" class="dropdown-item"
+                              >产品分类2</a
+                            >
+                          </li>
+                          <li>
+                            <a href="./products.html" class="dropdown-item"
+                              >产品分类3</a
+                            >
+                          </li>
+                          <li>
+                            <a href="./products.html" class="dropdown-item"
+                              >产品分类4</a
+                            >
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="nav-item">
+                        <a href="./video.html" class="nav-link">包装视频</a>
+                      </li>
+                      <li class="nav-item dropdown pc">
+                        <a href="./news.html" class="nav-link dropdown-toggle"
+                          >新闻资讯</a
+                        >
+                      </li>
+                      <li class="nav-item">
+                        <a href="./service.html" class="nav-link">服务体系</a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="./about.html" class="nav-link">关于我们</a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="./contact.html" class="nav-link">联系我们</a>
+                      </li>
+                    </ul>
+                  </div>
+                </nav>
+                <ul class="top-search-box">
+                  <li>
+                    <div class="search-tb">
+                      <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                    <ul class="top-search">
+                      <div class="input-group search-group">
+                        <input
+                          type="text"
+                          id="searchKeytop"
+                          class="form-control"
+                          data-provider="cms-search"
+                          data-type="product"
+                          data-pagesize="15"
+                          data-categoryid="0"
+                          placeholder="Search"
+                          onkeyup="cms.search(this)"
+                        />
+                        <div class="input-group-append">
+                          <button
+                            type="button"
+                            id="search_button"
+                            class="btn btn-light"
+                            data-control-id="searchKeytop"
+                            aria-label="search"
+                            onclick="cms.search(this)"
+                          >
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                          </button>
+                        </div>
+                      </div>
+                    </ul>
+                  </li>
+                </ul>
+                <div class="top-lang">
+                  <div class="dropdown lang">
+                    <i class="fa-light fa-earth-americas"></i>
+                    <span class="dropdown-toggle" data-toggle="dropdown"
+                      >Language</span
+                    >
+                    <ul class="dropdown-menu" aria-labelledby="site">
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          target="_blank"
+                          href="/"
+                          rel="noreferrer"
+                          >简体中文</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          target="_blank"
+                          href="/en"
+                          rel="noreferrer"
+                          >English</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    
+    <script>
+      function isMobile() {
+        var userAgentInfo = navigator.userAgent;
+        
+        // Android平台
+        if (/Android/.test(userAgentInfo)) {
+            return true;
+        }
+      
+        // iPhone或者iPad平台
+        else if (/(iPhone|iPod|iPad)/.test(userAgentInfo)) {
+            return true;
+        }
+          
+        // Windows Phone平台
+        else if (/Windows Phone/.test(userAgentInfo)){
+            return true;
+        }
+            
+        // 其他情况返回false
+        else{
+            return false;
+        }
+    }
+    
+    // 调用函数进行测试
+    console.log(isMobile());
+      $(function () {
+        $(window).scroll(function () {
+          if ($(window).scrollTop() > 10) {
+            $(".header").addClass("fadeInDown");
+          } else {
+            $(".header").removeClass("fadeInDown");
+          }
+        });
+      });
+    </script>
+    <!-- header end  -->
+    <!-- banner start -->
+    <div class="banner-home">
+      <div
+        class="swiper-container swiper-banner"
+        data-provider="slide"
+        data-ident="banner1"
+        data-autoplay
+        data-loop
+        data-effect="slide"
+        data-direction="horizontal"
+        data-speed="700"
+        data-delay="10000"
+        data-disableOnInteraction
+      >
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img
+              src="./images/banner1.jpg"
+              alt=""
+              class="img-fluid m-auto"
+              width="1920"
+              height="1047"
+            />
+          </div>
+          <div class="swiper-slide">
+            <img
+              src="./images/banner2.jpg"
+              alt=""
+              class="img-fluid m-auto"
+              width="1920"
+              height="1047"
+            />
+            <div class="banner-text">
+              <div class="container-xl">
+                <div class="index-banner">
+                  <div class="title">
+                    智能 <br />
+                    转换解决方案
+                  </div>
+                  <div class="text">提供体验更具性价比和创新的产品方案</div>
+                  <div class="text">
+                    Rhyguan is one of the world’s largest manufacturers of smart
+                    converting equipment for the label printing industry,
+                    covering a broad spectrum from small slitter rewinders to
+                    large digital converting units. If you want to know more
+                    information, please click on the “LANGUAGE” section.
+                  </div>
+
+                  <a href="/product" class="more">
+                    <p>阅读更多</p>
+                    <i class="fa fa-angle-right"></i>
+                  </a>
+                  <div class="mouse"><i class="fal fa-mouse-alt"></i></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <img
+              src="./images/banner3.jpg"
+              alt=""
+              class="img-fluid m-auto"
+              width="1920"
+              height="1047"
+            />
+            <div class="banner-text">
+              <div class="container-xl">
+                <div class="index-banner">
+                  <div class="title">
+                    出色的 <br />
+                    产品质量
+                  </div>
+                  <div class="text">
+                    力冠智能转印设备包括模切、烫印、检测、分切、柔印等<br />
+                    力冠设备高效率、高品质.
+                  </div>
+                  <div class="text">
+                    Rhyguan is one of the world’s largest manufacturers of smart
+                    converting equipment for the label printing industry,
+                    covering a broad spectrum from small slitter rewinders to
+                    large digital converting units. If you want to know more
+                    information, please click on the “LANGUAGE” section.
+                  </div>
+
+                  <a href="/product" class="more">
+                    <p>阅读更多</p>
+                    <i class="fa fa-angle-right"></i>
+                  </a>
+                  <div class="mouse"><i class="fal fa-mouse-alt"></i></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination" id="swiper-pagination-banner1"></div>
+      </div>
+    </div>
+
+    <!-- banner end -->
+    <div class="index-pro">
+      <div class="pro-single">
+        <div class="pro-intro">
+          <div class="pro-title">PLUS-330 420 组合式数码印后加工机</div>
+          <div class="pro-load">
+            <span
+              data-reveal-id="home-video"
+              data-animation="fade"
+              class="pro-down tkanniu"
+              onclick="video('')"
+              ><i class="fa-brands fa-youtube"></i
+            ></span>
+            <a
+              href=""
+              target="_blank"
+              class="pro-down"
+              ><i class="fa-solid fa-file-pdf"></i
+            ></a>
+            <a
+              href="./product_show.html"
+              class="pro-down"
+              ><i class="fa-solid fa-file-lines"></i
+            ></a>
+          </div>
+          <div class="pro-text">
+            力冠组合式印后加工机。该设备采用高端全伺服收放卷锥度张力控制系统和进口名牌过程纠偏系统，模块包含平压平模切单元(同时有平压平热烫金功能)、镭射定位烫单元、平丝网单元(可用于局部上光和丝印)、间歇全轮转柔印单元、间歇全轮转模切单元以及分切单元为一体。有操作方便，适应性强，生产效率高等特点。
+          </div>
+          <a
+            href="./product_show.html"
+            class="more"
+          >
+            <p>阅读更多</p>
+            <i class="fa fa-angle-right"></i>
+            <img
+              src="./images/click.png"
+              alt=""
+              class="orange"
+            />
+          </a>
+          <div class="pro-use">
+            <img src="./images/wu-wu.png" alt="" />
+          </div>
+        </div>
+        <div class="pro-specie pro-specie-box">
+          <img
+            src="./images/PLUS-330-420.png"
+            alt=""
+            class="img-width"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="index-pro pro-box-1">
+      <div class="pro-single">
+        <div class="pro-intro">
+          <div class="pro-title">PLUS-330 420 组合式数码印后加工机</div>
+          <div class="pro-load">
+            <span
+              data-reveal-id="home-video"
+              data-animation="fade"
+              class="pro-down tkanniu"
+              onclick="video('')"
+              ><i class="fa-brands fa-youtube"></i
+            ></span>
+            <a
+              href=""
+              target="_blank"
+              class="pro-down"
+              ><i class="fa-solid fa-file-pdf"></i
+            ></a>
+            <a
+              href="./product_show.html"
+              class="pro-down"
+              ><i class="fa-solid fa-file-lines"></i
+            ></a>
+          </div>
+          <div class="pro-text">
+            力冠组合式印后加工机。该设备采用高端全伺服收放卷锥度张力控制系统和进口名牌过程纠偏系统，模块包含平压平模切单元(同时有平压平热烫金功能)、镭射定位烫单元、平丝网单元(可用于局部上光和丝印)、间歇全轮转柔印单元、间歇全轮转模切单元以及分切单元为一体。有操作方便，适应性强，生产效率高等特点。
+          </div>
+          <a
+            href="./product_show.html"
+            class="more"
+          >
+            <p>阅读更多</p>
+            <i class="fa fa-angle-right"></i>
+            <img
+              src="./images/click.png"
+              alt=""
+              class="orange"
+            />
+          </a>
+          <div class="pro-use">
+            <img src="./images/wu-wu.png" alt="" />
+          </div>
+        </div>
+        <div class="pro-specie pro-specie-box">
+          <img
+            src="./images/PLUS-330-420.png"
+            alt=""
+            class="img-width"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="index-pro">
+      <div class="pro-single">
+        <div class="pro-intro">
+          <div class="pro-title">PLUS-330 420 组合式数码印后加工机</div>
+          <div class="pro-load">
+            <span
+              data-reveal-id="home-video"
+              data-animation="fade"
+              class="pro-down tkanniu"
+              onclick="video('')"
+              ><i class="fa-brands fa-youtube"></i
+            ></span>
+            <a
+              href=""
+              target="_blank"
+              class="pro-down"
+              ><i class="fa-solid fa-file-pdf"></i
+            ></a>
+            <a
+              href="./product_show.html"
+              class="pro-down"
+              ><i class="fa-solid fa-file-lines"></i
+            ></a>
+          </div>
+          <div class="pro-text">
+            力冠组合式印后加工机。该设备采用高端全伺服收放卷锥度张力控制系统和进口名牌过程纠偏系统，模块包含平压平模切单元(同时有平压平热烫金功能)、镭射定位烫单元、平丝网单元(可用于局部上光和丝印)、间歇全轮转柔印单元、间歇全轮转模切单元以及分切单元为一体。有操作方便，适应性强，生产效率高等特点。
+          </div>
+          <a
+            href="./product_show.html"
+            class="more"
+          >
+            <p>阅读更多</p>
+            <i class="fa fa-angle-right"></i>
+            <img
+              src="./images/click.png"
+              alt=""
+              class="orange"
+            />
+          </a>
+          <div class="pro-use">
+            <img src="./images/wu-wu.png" alt="" />
+          </div>
+        </div>
+        <div class="pro-specie pro-specie-box">
+          <img
+            src="./images/PLUS-330-420.png"
+            alt=""
+            class="img-width"
+          />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

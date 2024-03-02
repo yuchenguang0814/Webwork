@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  .container {
+    width: 300px;
+    height: 300px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+  }
+
+  .gear {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+  }
+
+  .tit {
+    position: absolute;
+    z-index: -999;
+    opacity: 0;
+  }
+
+  .circle {
+    fill: none;
+    stroke: #000;
+    stroke-width: 10;
+    /* 进度条填充一整个环形 */
+    stroke-dasharray: 755;
+    /* dashoffset 为偏移量 正数为向逆时针偏移 负数为向顺时针位置偏移
+				初始设为502时，进度条展示出的长度为0
+			 */
+    stroke-dashoffset: 755;
+    /* stroke-linecap: round; */
+    /* 开口向上 */
+    transform: rotate(-90deg);
+    transform-origin: center;
+    /* transform-box:fill-box; */
+    transition: 1s all 0s linear;
+  }
+
+/* 定义旋转动画 */
+/* @keyframes rotate {
+  0% { transform: rotate(0deg); } 
+  100% { transform: rotate(360deg); }
+} */
+ 
+/* 应用旋转动画到元素上 */
+.gear img {
+  transition: 1s all 0s  linear;
+}
+</style>
+
+<body style="height: 200vh;">
+  <div class="container">
+    <p class="tit">0</p>
+    <svg width="300" height="300">
+      <text class="text" x="100" y="100" style="text-anchor:middle">0</text>
+      <circle class="circle" cx="150" cy="150" r="120"></circle>
+    </svg>
+    <div class="gear">
+      <img src="./images/gear.png" alt="" class="gear_img">
+    </div>
+  </div>
+
+</body>
+<script>
+
+  window.addEventListener('wheel', function (event) {
+    var text = document.querySelector('.text')
+    var tit = document.querySelector('.tit')
+    var delta = event.deltaY || -event.detail || event.wheelDelta;
+    var gear_img = document.querySelector(".gear_img");
+    if (delta > 0 && tit.innerHTML < 100) {
+      // 如果滚轮向上且当前进度不到达最大值，则将进度加10%
+      tit.innerHTML = parseInt(tit.innerHTML) + 10;
+      gear_img.style.transform += " rotate(36deg)";
+
+    } else if (delta < 0 && tit.innerHTML > 0) {
+      // 如果滚轮向下且当前进度不为0，则将进度减去10%
+      tit.innerHTML = parseInt(tit.innerHTML) - 10;
+      gear_img.style.transform += " rotate(-36deg)";
+    }
+    setDegree()(tit.innerHTML)
+
+  });
+  // 百分比初始值
+  function setDegree() {
+    // 获取所操作的元素
+    let circleProgressBar = document.querySelector('.circle')
+    return function (percent) {
+      if (percent <= 100) {
+        // 502为圆环的周长 502为一圈对应100% 由此计算传入percent时的值
+        circleProgressBar.style.strokeDashoffset = 755 - (755 / 100) * percent
+      }
+    }
+  }
+</script>
+
+</html>
