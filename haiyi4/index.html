@@ -1,1008 +1,685 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>公司首页</title>
-  <link rel="stylesheet" href="./css/bootstrap.min.css">
-  <link rel="stylesheet" href="./css/swiper.min.css">
-  <link rel="stylesheet" href="./css/font-awesome.min.css">
-  <link rel="stylesheet" href="./css/animate.css">
-  <link rel="stylesheet" href="./css/font-other.css">
-  <link rel="stylesheet" href="./css/style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <meta name="format-detection" content="telephone=no">
+  <link rel="preload" as="script" href="./js/all.js" />
+  <link rel="preload" as="style" href="./css/all.css" />
+  <link rel="preload" as="style" href="./css/inside_m_en.css" media="screen and (max-width: 991px)" />
+  <link rel="preload" as="style" href="./css/inside_en.css" media="screen and (min-width: 992px)" />
+  <link rel="preload" as="image" href="./images/logo.svg" fetchpriority="high" />
+  <link rel="preload" as="style" href="./css/tarteaucitron.css" />
+  <link rel="preload" as="script" href="./js/tarteaucitron.tw.js" />
+  <link rel="preload" as="script" href="./js/tarteaucitron.services.js" />
+  <title>首页</title>
+  <script>
+    !function (e) {
+      "use strict"
+      var n = function (n, t, o) {
+        function i(e) { return f.body ? e() : void setTimeout(function () { i(e) }) } var d, r, a, l, f = e.document, s = f.createElement("link"), u = o || "all"
+        return t ? d = t : (r = (f.body || f.getElementsByTagName("head")[0]).childNodes, d = r[r.length - 1]), a = f.styleSheets, s.rel = "stylesheet", s.href = n, s.media = "only x", i(function () { d.parentNode.insertBefore(s, t ? d : d.nextSibling) }), l = function (e) {
+          for (var n = s.href, t = a.length; t--;)if (a[t].href === n) return e()
+          setTimeout(function () { l(e) })
+        }, s.addEventListener && s.addEventListener("load", function () { this.media = u }), s.onloadcssdefined = l, l(function () { s.media !== u && (s.media = u) }), s
+      }
+      "undefined" != typeof exports ? exports.loadCSS = n : e.loadCSS = n
+    }("undefined" != typeof global ? global : this)
+
+    // https://github.com/filamentgroup/loadJS
+    !function (e) { var t = function (t, o, n) { "use strict"; var r, a = e.document.getElementsByTagName("script")[0], c = e.document.createElement("script"); return "boolean" == typeof o && (r = n, n = o, o = r), c.src = t, c.async = !n, a.parentNode.insertBefore(c, a), o && "function" == typeof o && (c.onload = o), c }; "undefined" != typeof module ? module.exports = t : e.loadJS = t }("undefined" != typeof global ? global : this);
+
+    loadCSS("./css/all.css");
+  </script>
+  <link href="./css/all.css" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="./css/all.css">
+  </noscript>
+  <script src="./js/all.js"></script>
+
+  <script>
+    $(document).ready(function () {
+      $(".lazyload").lazyload();
+    });
+  </script>
+  <link href="./css/index_tw.css" rel="stylesheet">
+  <link href="./css/index_m_tw.css" rel="stylesheet" media="screen and (max-width: 991px)">
+  <link rel="stylesheet" href="./css/other.css">
+  <script>
+    loadJS("./js/jquery.prod-click.js", true);
+  </script>
 </head>
 
-<body class="resetStyle">
-  <!-- 页面顶部区域 -->
+<body class="in_tw" oncontextmenu="return false" ondragstart="return false" onselectstart="return false"
+  onselect="document.selection.empty()" oncopy="document.selection.empty()" onbeforecopy="return false">
   <header>
-    <div class="header top">
-      <div class="k  animated fadeInRight"></div>
+    <div id="header">
       <div class="container">
-        <div class="row">
-          <div class="top_l">
-            <a href="http://www.gp-best.com/" title="广东省绿革环保科技有限公司">
-              <img class="logo-def dh300s"
-                src="http://www.gp-best.com/staticres/upload/2021-12-23/ea54827e2b65517260d0e9262503f9b2.png"
-                alt="广东省绿革环保科技有限公司" />
-            </a>
+        <div id="logo"><a href="index.html" target="_self" title>
+            <img src="./images/logo.png" alt>
+          </a></div>
+        <div id="m_nav_btn"><img src="./images/m_nav_btn.png"></div>
+        <div class="subnav clearfix">
+
+          <div class="socila-icons snav_i">
+            <a class="yt-icon" href="" target="_blank" title><img src="./images/icon-yt.png"></a>
           </div>
-          <div class="top_r">
-            <ul class="nav dh300s">
-              <li id="nav_0" class=" cur">
-                <a href="/" title="首页"><span>首页</span></a>
-              </li>
-              <li class="drop-menu-effect  " id="nav_138">
-                <a href="http://www.gp-best.com/html/about_139.html" title="了解绿革"><span>了解绿革</span></a>
-                <div class="xiala">
-                  <div class="container">
-                    <div class="nav2_r"><img
-                        src="http://www.gp-best.com/staticres/upload/2022-01-12/80edc6d338631fca319234d9599db180.jpg"
-                        title="了解绿革" alt="了解绿革"></div>
-                    <div class="nav2_l nav-er-box">
-                      <div class="desc">
-                        <div class="en">了解绿革</div>
-                        <div class="list">
-                          广东省绿革环保科技有限公司始创于2005年（2005-2010年公司名称为东莞市力德节能科技有限公司），系中、台、港合作公司，本公司较早进入节能、环保的行业。</div>
-                      </div>
-                      <div class="nav-er-list">
-                        <a class="nav-er transition" href="/page/about/index.php?lang=cn&nid=139#ny_about_1"
-                          title="关于绿革">
-                          <span class="dhwz">关于绿革</span>
-                        </a>
-                      </div>
-                      <div class="nav-er-list">
-                        <a class="nav-er transition" href="/page/about/index.php?lang=cn&nid=139#ny_about_2"
-                          title="公司风采">
-                          <span class="dhwz">公司风采</span>
-                        </a>
-                      </div>
-                      <div class="nav-er-list">
-                        <a class="nav-er transition" href="/page/about/index.php?lang=cn&nid=139#ny_about_3"
-                          title="品牌文化">
-                          <span class="dhwz">品牌文化</span>
-                        </a>
-                      </div>
-                      <div class="nav-er-list">
-                        <a class="nav-er transition" href="/page/about/index.php?lang=cn&nid=139#ny_about_4"
-                          title="里程碑">
-                          <span class="dhwz">里程碑</span>
-                        </a>
-                      </div>
-                      <div class="nav-er-list">
-                        <a class="nav-er transition" href="/page/about/index.php?lang=cn&nid=139#ny_about_5"
-                          title="企业荣誉">
-                          <span class="dhwz">企业荣誉</span>
-                        </a>
-                      </div>
-                      <div class="nav-er-list">
-                        <a class="nav-er transition" href="/page/about/index.php?lang=cn&nid=139#ny_about_6"
-                          title="合作伙伴">
-                          <span class="dhwz">合作伙伴</span>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li class="drop-menu-effect  " id="nav_145">
-                <a href="http://www.gp-best.com/html/productlist_145_1.html" title="产品中心"><span>产品中心</span></a>
-                <div class="xiala">
-                  <div class="container">
-                    <div class="nav2_r"><img
-                        src="http://www.gp-best.com/staticres/upload/2022-01-12/75eb336a2b605e82c816cacee3ba559b.jpg"
-                        title="产品中心" alt="产品中心"></div>
-                    <div class="nav2_l nav-er-box">
-                      <div class="desc">
-                        <div class="en">产品中心</div>
-                        <div class="list">绿革环保对产品的生产制造和出品质量精益求精，拥有一套完善的生产检测流程标准，在生产上力求完美，设备品质在业界处于领先地位。</div>
-                      </div>
-                      <div class="nav-er-list">
-                        <a class="nav-er" href="http://www.gp-best.com/html/productlist_172_1.html" title="碳化硅陶瓷膜设备">
-                          <span class="dhwz">碳化硅陶瓷膜设备</span>
-                        </a>
-                      </div>
-                      <div class="nav-er-list">
-                        <a class="nav-er" href="http://www.gp-best.com/html/productlist_146_1.html" title="厨余垃圾处理设备">
-                          <span class="dhwz">厨余垃圾处理设备</span>
-                        </a>
-                      </div>
-                      <div class="nav-er-list">
-                        <a class="nav-er" href="http://www.gp-best.com/html/productlist_147_1.html" title="污泥低温干化机">
-                          <span class="dhwz">污泥低温干化机</span>
-                        </a>
-                      </div>
-                      <div class="nav-er-list">
-                        <a class="nav-er" href="http://www.gp-best.com/html/productlist_148_1.html" title="真空导排系统">
-                          <span class="dhwz">真空导排系统</span>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li class="drop-menu-effect  " id="nav_149">
-                <a href="http://www.gp-best.com/html/about_150.html" title="解决方案"><span>解决方案</span></a>
-                <div class="xiala">
-                  <div class="container">
-                    <div class="nav2_r"><img
-                        src="http://www.gp-best.com/staticres/upload/2022-01-12/8f87149d85c852915a2bea1efa24f488.jpg"
-                        title="解决方案" alt="解决方案"></div>
-                    <div class="nav2_l nav-er-box">
-                      <div class="desc">
-                        <div class="en">解决方案</div>
-                        <div class="list">多年行业经验保障，常年为多个行业提供解决方案服务</div>
-                      </div>
-                      <div class="nav-er-list">
-                        <a class="nav-er" href="http://www.gp-best.com/html/about_150.html" title="厨余垃圾处理解决方案">
-                          <span class="dhwz">厨余垃圾处理解决方案</span>
-                        </a>
-                      </div>
-                      <div class="nav-er-list">
-                        <a class="nav-er" href="http://www.gp-best.com/html/about_151.html" title="污泥低温干化解决方案">
-                          <span class="dhwz">污泥低温干化解决方案</span>
-                        </a>
-                      </div>
-                      <div class="nav-er-list">
-                        <a class="nav-er" href="http://www.gp-best.com/html/about_152.html" title="真空导排解决方案">
-                          <span class="dhwz">真空导排解决方案</span>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li class="drop-menu-effect  " id="nav_153">
-                <a href="http://www.gp-best.com/html/imglist_153_1.html" title="成功案例"><span>成功案例</span></a>
-                <div class="xiala">
-                  <div class="container">
-                    <div class="nav2_r"><img
-                        src="http://www.gp-best.com/staticres/upload/2022-01-11/7524f56e3868f66e10b5542ed008f49d.jpg"
-                        title="成功案例" alt="成功案例"></div>
-                    <div class="nav2_l nav-er-box">
-                      <div class="desc">
-                        <div class="en">成功案例</div>
-                        <div class="list">绿革环保产品和解决方案应用于全球多个国家和地区。</div>
-                      </div>
-                      <div class="nav-er-list">
-                        <a class="nav-er" href="http://www.gp-best.com/html/imglist_169_1.html" title="厨余垃圾处理案例">
-                          <span class="dhwz">厨余垃圾处理案例</span>
-                        </a>
-                      </div>
-                      <div class="nav-er-list">
-                        <a class="nav-er" href="http://www.gp-best.com/html/imglist_170_1.html" title="污泥处理案例">
-                          <span class="dhwz">污泥处理案例</span>
-                        </a>
-                      </div>
-                      <div class="nav-er-list">
-                        <a class="nav-er" href="http://www.gp-best.com/html/imglist_171_1.html" title="真空导排案例">
-                          <span class="dhwz">真空导排案例</span>
-                        </a>
-                      </div>
-                      <div class="nav-er-list">
-                        <a class="nav-er" href="http://www.gp-best.com/html/imglist_173_1.html" title="碳化硅膜案例">
-                          <span class="dhwz">碳化硅膜案例</span>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li class="drop-menu-effect  " id="nav_156">
-                <a href="http://www.gp-best.com/html/newslist_156_1.html" title="新闻中心"><span>新闻中心</span></a>
-                <div class="xiala">
-                  <div class="container">
-                    <div class="nav2_r"><img
-                        src="http://www.gp-best.com/staticres/upload/2022-01-12/8047cae384c8d977a284c84daa6fe29e.jpg"
-                        title="新闻中心" alt="新闻中心"></div>
-                    <div class="nav2_l nav-er-box">
-                      <div class="desc">
-                        <div class="en">新闻中心</div>
-                        <div class="list">记录绿革大小事，传播环保价值观</div>
-                      </div>
-                      <div class="nav-er-list">
-                        <a class="nav-er" href="http://www.gp-best.com/html/newslist_157_1.html" title="绿革新闻">
-                          <span class="dhwz">绿革新闻</span>
-                        </a>
-                      </div>
-                      <div class="nav-er-list">
-                        <a class="nav-er" href="http://www.gp-best.com/html/newslist_158_1.html" title="行业资讯">
-                          <span class="dhwz">行业资讯</span>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li class="drop-menu-effect  " id="nav_159">
-                <a href="http://www.gp-best.com/html/about_160.html" title="联系我们"><span>联系我们</span></a>
-                <div class="xiala">
-                  <div class="container">
-                    <div class="nav2_r"><img
-                        src="http://www.gp-best.com/staticres/upload/2022-01-11/da8844573e69597f8e7fb0fe5e3ba3d1.jpg"
-                        title="联系我们" alt="联系我们"></div>
-                    <div class="nav2_l nav-er-box">
-                      <div class="desc">
-                        <div class="en">联系我们</div>
-                        <div class="list">广东省绿革环保科技有限公司，用服务缔造品牌用真情打动人心，您可以通过以下几种方式联系到我们。</div>
-                      </div>
-                      <div class="nav-er-list">
-                        <a class="nav-er transition" href="/page/about/index.php?lang=cn&nid=160#box1" title="联系我们">
-                          <span class="dhwz">联系我们</span>
-                        </a>
-                      </div>
-                      <div class="nav-er-list">
-                        <a class="nav-er transition" href="/page/about/index.php?lang=cn&nid=160#box2" title="诚聘精英">
-                          <span class="dhwz">诚聘精英</span>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <div class="zx">
-                <div class="tel">
-                  <img src="http://www.gp-best.com/staticres/upload/2021-12-23/23f68d7f23b7773d3acd7b2332292f5d.png">
-                  <p>134-2479-6768</p>
-                </div>
-                <div class="h_search">
-                  <i class="search_icon"></i>
-                </div>
-                <div class="dh300s">
-                  <i id="m-head-nav" data-active="">
-                    <div class="line line1 donghua"></div>
-                    <div class="line line2 donghua"></div>
-                    <div class="line line3 donghua"></div>
-                  </i>
-                </div>
-              </div>
-              <div class="mm-nav-box donghua" id="mmNavBox">
-                <div class="mm-wrap donghua">
-                  <ul class="mm-nav">
-                    <li class="li1">
-                      <div class="mm-title">
-                        <div class="mclick">
-                          <a href="/" title="网站首页"></a>
-                        </div>
-                        <a class="a1" href="/" title="网站首页">网站首页</a>
-                      </div>
-                    </li>
-                    <li class="li1" data-on="">
-                      <div class="mm-title">
-                        <div class="click"></div>
-                        <a class="a1" href="http://www.gp-best.com/html/about_139.html" title="了解绿革">了解绿革</a>
-                      </div>
-                      <ul class="mm-innav">
-                        <li><a class="dhwz" href="http://www.gp-best.com/html/about_139.html" title="关于绿革">关于绿革</a></li>
-                        <li><a class="dhwz" href="http://www.gp-best.com/html/about_140.html" title="公司风采">公司风采</a></li>
-                        <li><a class="dhwz" href="http://www.gp-best.com/html/about_141.html" title="品牌文化">品牌文化</a></li>
-                        <li><a class="dhwz" href="http://www.gp-best.com/html/about_142.html" title="里程碑">里程碑</a></li>
-                        <li><a class="dhwz" href="http://www.gp-best.com/html/imglist_143_1.html" title="企业荣誉">企业荣誉</a>
-                        </li>
-                        <li><a class="dhwz" href="http://www.gp-best.com/html/imglist_144_1.html" title="合作伙伴">合作伙伴</a>
-                        </li>
-                      </ul>
-                    </li>
-                    <li class="li1" data-on="">
-                      <div class="mm-title">
-                        <div class="click"></div>
-                        <a class="a1" href="http://www.gp-best.com/html/productlist_145_1.html" title="产品中心">产品中心</a>
-                      </div>
-                      <ul class="mm-innav">
-                        <li><a class="dhwz" href="http://www.gp-best.com/html/productlist_172_1.html"
-                            title="碳化硅陶瓷膜设备">碳化硅陶瓷膜设备</a></li>
-                        <li><a class="dhwz" href="http://www.gp-best.com/html/productlist_146_1.html"
-                            title="厨余垃圾处理设备">厨余垃圾处理设备</a></li>
-                        <li><a class="dhwz" href="http://www.gp-best.com/html/productlist_147_1.html"
-                            title="污泥低温干化机">污泥低温干化机</a></li>
-                        <li><a class="dhwz" href="http://www.gp-best.com/html/productlist_148_1.html"
-                            title="真空导排系统">真空导排系统</a></li>
-                      </ul>
-                    </li>
-                    <li class="li1" data-on="">
-                      <div class="mm-title">
-                        <div class="click"></div>
-                        <a class="a1" href="http://www.gp-best.com/html/about_150.html" title="解决方案">解决方案</a>
-                      </div>
-                      <ul class="mm-innav">
-                        <li><a class="dhwz" href="http://www.gp-best.com/html/about_150.html"
-                            title="厨余垃圾处理解决方案">厨余垃圾处理解决方案</a></li>
-                        <li><a class="dhwz" href="http://www.gp-best.com/html/about_151.html"
-                            title="污泥低温干化解决方案">污泥低温干化解决方案</a></li>
-                        <li><a class="dhwz" href="http://www.gp-best.com/html/about_152.html"
-                            title="真空导排解决方案">真空导排解决方案</a></li>
-                      </ul>
-                    </li>
-                    <li class="li1" data-on="">
-                      <div class="mm-title">
-                        <div class="click"></div>
-                        <a class="a1" href="http://www.gp-best.com/html/imglist_153_1.html" title="成功案例">成功案例</a>
-                      </div>
-                      <ul class="mm-innav">
-                        <li><a class="dhwz" href="http://www.gp-best.com/html/imglist_169_1.html"
-                            title="厨余垃圾处理案例">厨余垃圾处理案例</a></li>
-                        <li><a class="dhwz" href="http://www.gp-best.com/html/imglist_170_1.html"
-                            title="污泥处理案例">污泥处理案例</a></li>
-                        <li><a class="dhwz" href="http://www.gp-best.com/html/imglist_171_1.html"
-                            title="真空导排案例">真空导排案例</a></li>
-                        <li><a class="dhwz" href="http://www.gp-best.com/html/imglist_173_1.html"
-                            title="碳化硅膜案例">碳化硅膜案例</a></li>
-                      </ul>
-                    </li>
-                    <li class="li1" data-on="">
-                      <div class="mm-title">
-                        <div class="click"></div>
-                        <a class="a1" href="http://www.gp-best.com/html/newslist_156_1.html" title="新闻中心">新闻中心</a>
-                      </div>
-                      <ul class="mm-innav">
-                        <li><a class="dhwz" href="http://www.gp-best.com/html/newslist_157_1.html" title="绿革新闻">绿革新闻</a>
-                        </li>
-                        <li><a class="dhwz" href="http://www.gp-best.com/html/newslist_158_1.html" title="行业资讯">行业资讯</a>
-                        </li>
-                      </ul>
-                    </li>
-                    <li class="li1" data-on="">
-                      <div class="mm-title">
-                        <div class="click"></div>
-                        <a class="a1" href="http://www.gp-best.com/html/about_160.html" title="联系我们">联系我们</a>
-                      </div>
-                      <ul class="mm-innav">
-                        <li><a class="dhwz" href="http://www.gp-best.com/html/about_160.html" title="联系我们">联系我们</a></li>
-                        <li><a class="dhwz" href="http://www.gp-best.com/html/joblist_161_1.html" title="诚聘精英">诚聘精英</a>
-                        </li>
-                      </ul>
-                    </li>
-                  </ul>
-                </div>
-              </div>
+          <div class="btn-group lang">
+            <button type="button" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+              aria-expanded="false">中文 <i class="fa fa-chevron-down"></i></button>
+            <ul class="dropdown-menu">
+              <li><a href="./index.html" title="中文" target="_self">中文</a></li>
+              <li><a href="./en/index.html" title="English" target="_self">English</a></li>
             </ul>
           </div>
+
+          <div class="snav_i"><a href="./download.html" target="_self" title="下载专区">下载专区</a></div>
+          <div class="snav_i"><a href="./contact.html" target="_self" title="联系我们">联系我们</a></div>
         </div>
-      </div>
-      <!-- 搜索框 -->
-      <div class="search_box">
-        <div class="box">
-          <form method="POST" name="myform1" action="http://www.gp-best.com/page/search/index.php" target="_self"
-            class="j-form">
-            <div class="form-group">
-              <input type="hidden" name="lang" value="cn">
-              <input type="hidden" name="modular_id" value='' />
-              <input type="text" name="keyword" placeholder="请输入要搜索的内容">
-              <button type="submit"></button>
-            </div>
-          </form>
+        <nav class="clearfix">
+          <div class="nav_i"><a href="./about.html" target="_self" title="关于我们">关于我们</a></div>
+          <div class="nav_i"><a href="./products.html" title="产品中心">产品中心<i class="fa fa-angle-down"></i></a>
+            <ul class="sub_menu list-unstyled">
+              <li><a href="./products.html" title="产品分类1">产品分类1</a></li>
+              <li><a href="./products.html" title="产品分类1">产品分类2</a></li>
+              <li><a href="./products.html" title="产品分类1">产品分类3</a></li>
+            </ul>
+          </div>
+          <div class="nav_i"><a href="./news.html" target="_self" title="新闻资讯">新闻资讯</a></div>
+          <div class="nav_i"><a href="./solutions.html" target="_self" title="解决方案">解决方案</a></div>
+        </nav>
+        <div id="m_nav">
+          <div class="close_btn"><img src="./images/btn_close.png"></div>
+          <div class="clearfix"></div>
+          <div class="m_nav_i m_lang">
+            <ul class="sub_menu">
+              <li><a href="./index.html" title="中文" target="_self">中文</a></li>
+              <li><a href="./en/index.html" title="English" target="_self">English</a></li>
+            </ul>
+          </div>
+          <div class="m_nav_i"><a href="./solutions.html" target="_self" title="解决方案">解决方案</a></div>
+          <div class="m_nav_i"><a href="./products.html" target="_self" title="产品介绍">产品介绍<i
+                class="fa fa-angle-down"></i></a>
+            <ul class="sub_menu list-unstyled">
+              <li><a href="./products.html" title="产品分类1">产品分类1</a></li>
+              <li><a href="./products.html" title="产品分类1">产品分类2</a></li>
+              <li><a href="./products.html" title="产品分类1">产品分类3</a></li>
+            </ul>
+          </div>
+          <div class="m_nav_i"><a href="./about.html" target="_self" title="關於我們">关于我们</a></div>
+          <div class="m_nav_i"><a href="./news.html" target="_self" title="最新消息">最新消息</a></div>
+          <div class="m_nav_i"><a href="./download.html" target="_self" title="下载专区">下载专区</a></div>
+          <div class="m_nav_i"><a href="./contact.html" target="_self" title="联系我们">联系我们</a></div>
         </div>
       </div>
     </div>
   </header>
-  <section class="header_space"></section>
-  <!-- 页面顶部区域结束 -->
-  <!-- 页面内容区域 -->
-  <div class="home-content">
-    <!-- 轮播图区域 -->
-    <div class="home-section1">
-      <div class="swiper-container home-section1-swiper js-heightAuto">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <a href="./about.html">
-              <div class="mask">
+  <article>
+    <!-- banner start -->
+    <div id="index_banner">
+      <div class="flexslider flexslider-full">
+        <ul class="slides">
+          <li id="banner1">
+            <div class="bannerbox">
+              <div class="bannertxt">
                 <div class="container">
-                  <div class="logo-w ani" swiper-animate-effect="fadeInUp">
-                    <img src="./images/logo-w.png" alt="">
+                  <div class="title">
+                    <span class="inbtext1">海翊机械为您定制解决方案</span>
+                    <span class="inbtext2">助力您降本增效</span>
                   </div>
-                  <p class="des ani" swiper-animate-effect="fadeInUp" swiper-animate-delay="0.2s">公司-公司介绍标语</p>
-                  <div class="more ani" swiper-animate-effect="fadeIn" swiper-animate-delay="0.6s">去了解 <img
-                      src="./images/more.png" alt=""></div>
-                  <p class="smdes ani" swiper-animate-effect="fadeInUp" swiper-animate-delay="0.3s">Company <BR>Company
-                    - about company introduction slogan</p>
                 </div>
               </div>
-              <img class="bannerbg" src="./images/banner.jpg" alt="">
-            </a>
-          </div>
-          <div class="swiper-slide banner2">
-            <a href="http://www.gp-best.com/jiejuefangan2">
-              <div class="mask">
+              <img src="./images/F0011.jpg" class="hidden-xs">
+              <img src="./images/F0011_s.jpg" class="visible-xs">
+            </div>
+          </li>
+          <li id="banner2">
+            <div class="bannerbox">
+              <div class="bannertxt">
                 <div class="container">
-                  <h3 class="ani" swiper-animate-effect="fadeInUp">KITCHEN WASTE DISPOSAL SOLUTION</h3>
-                  <div>
-                    <p class="des ani" swiper-animate-effect="fadeInUp" swiper-animate-delay="0.2s">
-                      <span>全套厨余垃圾处理解决方案</span></p>
+                  <div class="title">
+                    <span class="inbtext1">海翊机械为您<br />
+                      定制解决方案</span>
+                    <span class="inbtext2">助力您降本增效！</span>
                   </div>
-                  <div class="tips ani" swiper-animate-effect="fadeIn" swiper-animate-delay="0.7s">绿革—掌握厨余垃圾处理新技术</div>
-                  <div>
-                    <div class="more ani" swiper-animate-effect="fadeInUp" swiper-animate-delay="0.3s">方案详情 <img
-                        src="./images/more.png" alt=""></div>
-                  </div>
-                  <p class="smdes ani" swiper-animate-effect="fadeInUp" swiper-animate-delay="0.4s">SLUDGE
-                    LOW-TEMPERATURE DRYING TECHNOLOGY <br>MANUFACTURERS</p>
                 </div>
               </div>
-              <img class="bannerbg" src="./images/banner2.jpg" alt="">
-            </a>
+              <img src="./images/F0011.jpg" class="hidden-xs">
+              <img src="./images/F0011_s.jpg" class="visible-xs">
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- banner end -->
+    <!-- about start -->
+    <div class="block-height">
+      <div class="ix-about-zone ">
+        <figure class="pic-box aa">
+          <img src="./images/about01.jpg" alt="关于我们" class="img-fluid">
+        </figure>
+        <div class="ix-about-word">
+          <div class="main-title wow fadeInUp">
+            <h3 class="cn">公司简介</h3>
           </div>
-          <div class="swiper-slide banner3">
-            <a href="/wunidiwenganhuaji/2.html">
-              <div class="mask">
-                <div class="container">
-                  <h3 class="ani" swiper-animate-effect="fadeInUp">CONTINUOUS STEAM<br>SLUDGE DRYER</h3>
-                  <h4 class="ani" swiper-animate-effect="fadeInUp" swiper-animate-delay="0.2s">连续蒸汽式污泥干化机</h4>
-                  <div class="tips ani" swiper-animate-effect="fadeIn" swiper-animate-delay="1s">六效干化，创新科技，两倍行业标准</div>
-                  <div class="listbox">
-                    <div class="box-row">
-                      <div class="box-col ani" swiper-animate-effect="fadeInUp" swiper-animate-delay="0.3s">
-                        <div class="numbox">
-                          <span class="incrementing" data-to="90" data-speed="3000">90</span>
-                          <span class="symbol">%</span>
-                        </div>
-                        <p class="txt">污泥干化率更高</p>
-                      </div>
-                      <div class="box-col ani" swiper-animate-effect="fadeInUp" swiper-animate-delay="0.4s">
-                        <div class="numbox">
-                          <span class="incrementing" data-to="40" data-speed="3000">40</span>
-                          <span class="symbol">℃</span>
-                        </div>
-                        <p class="txt">低温干化更安全</p>
-                      </div>
-                      <div class="box-col ani" swiper-animate-effect="fadeInUp" swiper-animate-delay="0.5s">
-                        <div class="numbox">
-                          <span class="incrementing" data-to="5" data-speed="3000">5</span>
-                          <span class="symbol">℃</span>
-                        </div>
-                        <p class="txt">水蒸气凝结温度</p>
-                      </div>
-                      <div class="box-col ani" swiper-animate-effect="fadeInUp" swiper-animate-delay="0.6s">
-                        <div class="numbox">
-                          <span class="incrementing" data-to="100" data-speed="3000">100</span>
-                          <span class="symbol">%</span>
-                        </div>
-                        <p class="txt">全程热值无耗损</p>
-                      </div>
-                      <div class="box-col ani" swiper-animate-effect="fadeInUp" swiper-animate-delay="0.7s">
-                        <div class="numbox">
-                          <span class="incrementing" data-to="1" data-speed="3000">1</span>
-                          <span class="symbol last-symbol">kw.h/T</span>
-                        </div>
-                        <p class="txt">功耗低省钱省心</p>
-                      </div>
+          <div class="slogan-word wow fadeInUp" data-wow-delay="150ms">
+            <h4>专营：<br>立式机，给袋式包装机，装盒机，装箱机。</h4>
+          </div>
+          <div class="about-intro wow fadeInUp" data-wow-delay="250ms">
+            <p>温州海翊机械有限公司<br>以诚挚、创新的信念在瞬息万变的市场中，<br>秉持优良的质量及为客户考虑的服务建立客户对我们的信心。</p>
+          </div>
+          <div class="btnWrap wow fadeIn">
+            <div class="btnStyle--wrapper">
+              <a href="./about.html" class="btnStyle" title="了解更多"><span class="txt fa fa-angle-right">了解更多</span> </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- about end -->
+    <div class="in_prod">
+      <div class="main-title wow fadeInUp pro-main-tit">
+        <h3 class="cn">产品展示</h3>
+        <p>温州海翊机械有限公司<br>多年来致力于专注于颗粒、粉末、液体、膏体等产品的自动化包装及自动化生产流水线的制造 、研究、开发和应用。
+          <br>博采优良的包装技术，实施经营战略。<br>并同国内外同行进行技术交流和合作，取长补短，结合用户不同的需求！
+
+          </p>
+        
+        <div class="btnWrap wow fadeIn">
+          <div class="btnStyle--wrapper">
+            <a href="./about.html" class="btnStyle" title="了解更多"><span class="txt fa fa-angle-right">了解更多</span> </a>
+          </div>
+        </div>
+      </div>
+      <div id="carousel_in_product" class="carousel slide" data-ride="carousel" data-interval="false">
+
+        <div class="carousel-inner" role="listbox">
+          <div class="item active prod1">
+            <div class="in_prod_box prod_box1 European_step1">
+              <div class="container">
+                <div class="in_box">
+                  <div class="title">给袋式包装机<span>适用于颗粒、块状、二次包装、食品、宠物食品、宠物用品、五金、医药等。（酱体、液体也可包装）<span></div>
+                  <div class="text">
+                    <p>该机采用稳定的凸轮机械传动技术，使设备运行稳定,故障率低、能耗低。同时该机采用高端的电路结构，人机界面(PLC+HMI)等技术，实现机电一体化操作方便简单。</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="in_prod_box prod_box_right European_step2" style="display:none;">
+              <div class="in_box">
+                <div class="title">快速且精準的溫控系統</div>
+                <div class="text clearfix">
+                  <div class="box_r"><img src="./images/prod_1_2.jpg" class="img-responsive" alt>
+                  </div>
+                  <div class="subtitle">精準溫度控制，提升機器對產製<br>過程原料的適應力。</div>
+                  <p>
+                    由於市場對於片材的擠出品質、厚度等精度要求不斷提升，這時機器能精準的溫度控制，對於材料製程品質結果有很大影響，所以我們採用最好的溫控系統，讓溫度顯示於面板上且分區獨立控制，方便操作者可快速監控現場溫度變化，當溫度異常，能立即做出問題排除。
+                  </p>
+                  <div class="btnWrap">
+                    <div class="btnStyle--wrapper">
+                      <a href="./about.html" class="btnStyle" title="了解更多"><span class="txt fa fa-angle-right">了解更多</span> </a>
                     </div>
                   </div>
                 </div>
               </div>
-              <img class="banner3bg" src="./images/banner3.png" alt="">
-            </a>
+            </div>
+            <div class="in_prod_box prod_box_right European_step3" style="display:none;">
+              <div class="in_box">
+                <div class="title">動態設定模式</div>
+                <div class="text clearfix">
+                  <div class="box_r"><img src="./images/prod_1_3.jpg" class="img-responsive" alt>
+                  </div>
+                  <div class="subtitle">參數動態微調設定，提升產能、提高良率。</div>
+                  <p>在成型機生產運作中，常需要針對參數做機動性的微調或參數優化，經由我們長期研究模擬後，將生產運作中可能遇到的變動參數做動態微調，提升成型機的靈活度，降低不良品的產生，讓產能、效益達到最大化。</p>
+                  <div class="btnWrap">
+                    <div class="btnStyle--wrapper">
+                      <a href="./about.html" class="btnStyle" title="了解更多"><span class="txt fa fa-angle-right">了解更多</span> </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="in_prod_box prod_box_left European_step4" style="display:none;">
+              <div class="in_box">
+                <div class="title">FSS 高智能化系統</div>
+                <div class="text clearfix">
+                  <div class="box_r"><img src="./images/prod_1_4.jpg" class="img-responsive" alt>
+                  </div>
+                  <div class="subtitle">簡單步驟、輕鬆操作，聰明產線，零誤差!</div>
+                  <p>這是一套「以人為本」的智能化系統，將參數及操作設定，化繁為簡，減少人為操作造成的誤差及不良率的產生，讓機器性能最大化，為客戶帶來最大的生產效能及利潤。</p>
+                  <div class="btnWrap">
+                    <div class="btnStyle--wrapper">
+                      <a href="./about.html" class="btnStyle" title="了解更多"><span class="txt fa fa-angle-right">了解更多</span> </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="in_prod_box prod_box_left European_step5" style="display:none;">
+              <div class="in_box">
+                <div class="title">高精度、穩定的鋼尺裁斷系統</div>
+                <div class="text clearfix">
+                  <div class="box_r"><img src="./images/prod_1_5.jpg" class="img-responsive" alt>
+                  </div>
+                  <div class="subtitle">鋼尺刀裁外型沖切及下料沖孔沖切</div>
+                  <p>
+                    面臨求新求變的時代，因應少量多樣化的生產，提升交期、降低成本，將是時下最大的需求，而RMD-800使用鋼尺刀裁斷技術，減少鋼模裁斷的模具製造時間及成本，不僅符合現代產製需求，更以伺服驅動凸輪機構來帶動裁斷模做0.02mm的精度重現。
+                  </p>
+                  <div class="btnWrap">
+                    <div class="btnStyle--wrapper">
+                      <a href="./about.html" class="btnStyle" title="了解更多"><span class="txt fa fa-angle-right">了解更多</span> </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="in_prod_box prod_box_left European_step6" style="display:none;">
+              <div class="in_box">
+                <div class="title">自動堆疊技術<br />
+                  完美演繹最後工序</div>
+                <div class="text clearfix">
+                  <div class="box_r"><img src="./images/prod_1_6.jpg" class="img-responsive" alt>
+                  </div>
+                  <p>堆疊─是成型設備的最後一道工序，以自動堆疊方式，不僅可以達到百分之百的數量精準，更可提升食品包裝容器的安
+                    衛生，因為從入料生產到最後的包裝成型，都由機械一步到位，僅需於最後人工裝箱作業，降低生產品汙染及入袋數錯誤的問題。</p>
+                    <div class="btnWrap">
+                      <div class="btnStyle--wrapper">
+                        <a href="./about.html" class="btnStyle" title="了解更多"><span class="txt fa fa-angle-right">了解更多</span> </a>
+                      </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+            <div class="in_prod_pc"><img src="./images/in_pro.png" alt="给袋式包装机" loading="lazy">
+            </div>
+            <div class="in_prod_step">
+              <div class="container">
+                <div class="inner">
+                  <ul class="list-unstyled">
+                    <li id="European_step1" style="left:0;" class="active"><a href="javascript:void(0);"><span
+                          class="disc"></span>给袋式包装机</a></li>
+                    <li id="European_step2" style="left:20%;"><a href="javascript:void(0);"><span
+                          class="disc"></span>温控系统</a></li>
+                    <li id="European_step3" style="left:40%;"><a href="javascript:void(0);"><span
+                          class="disc"></span>主机结构</a></li>
+                    <li id="European_step4" style="left:60%;"><a href="javascript:void(0);"><span
+                          class="disc"></span>PLC系统</a></li>
+                    <li id="European_step5" style="left:80%;"><a href="javascript:void(0);"><span
+                          class="disc"></span>物料填充</a></li>
+                    <li id="European_step6" style="left:100%;"><a href="javascript:void(0);"><span
+                          class="disc"></span>流水线生产</a></li>
+                  </ul>
+                  <span class="filling-line" style="width:0%"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="item prod2">
+            <div class="in_prod_box prod_box1 European_step1">
+              <div class="container">
+                <div class="in_box">
+                  <div class="title">给袋式包装机<span>适用于颗粒、块状、二次包装、食品、宠物食品、宠物用品、五金、医药等。（酱体、液体也可包装）<span></div>
+                  <div class="text">
+                    <p>该机采用稳定的凸轮机械传动技术，使设备运行稳定,故障率低、能耗低。同时该机采用高端的电路结构，人机界面(PLC+HMI)等技术，实现机电一体化操作方便简单。</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="in_prod_box prod_box_right European_step2" style="display:none;">
+              <div class="in_box">
+                <div class="title">快速且精準的溫控系統</div>
+                <div class="text clearfix">
+                  <div class="box_r"><img src="./images/prod_1_2.jpg" class="img-responsive" alt>
+                  </div>
+                  <div class="subtitle">精準溫度控制，提升機器對產製<br>過程原料的適應力。</div>
+                  <p>
+                    由於市場對於片材的擠出品質、厚度等精度要求不斷提升，這時機器能精準的溫度控制，對於材料製程品質結果有很大影響，所以我們採用最好的溫控系統，讓溫度顯示於面板上且分區獨立控制，方便操作者可快速監控現場溫度變化，當溫度異常，能立即做出問題排除。
+                  </p>
+                  <div class="btnWrap">
+                    <div class="btnStyle--wrapper">
+                      <a href="./about.html" class="btnStyle" title="了解更多"><span class="txt fa fa-angle-right">了解更多</span> </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="in_prod_box prod_box_right European_step3" style="display:none;">
+              <div class="in_box">
+                <div class="title">動態設定模式</div>
+                <div class="text clearfix">
+                  <div class="box_r"><img src="./images/prod_1_3.jpg" class="img-responsive" alt>
+                  </div>
+                  <div class="subtitle">參數動態微調設定，提升產能、提高良率。</div>
+                  <p>在成型機生產運作中，常需要針對參數做機動性的微調或參數優化，經由我們長期研究模擬後，將生產運作中可能遇到的變動參數做動態微調，提升成型機的靈活度，降低不良品的產生，讓產能、效益達到最大化。</p>
+                  <div class="btnWrap">
+                    <div class="btnStyle--wrapper">
+                      <a href="./about.html" class="btnStyle" title="了解更多"><span class="txt fa fa-angle-right">了解更多</span> </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="in_prod_box prod_box_left European_step4" style="display:none;">
+              <div class="in_box">
+                <div class="title">FSS 高智能化系統</div>
+                <div class="text clearfix">
+                  <div class="box_r"><img src="./images/prod_1_4.jpg" class="img-responsive" alt>
+                  </div>
+                  <div class="subtitle">簡單步驟、輕鬆操作，聰明產線，零誤差!</div>
+                  <p>這是一套「以人為本」的智能化系統，將參數及操作設定，化繁為簡，減少人為操作造成的誤差及不良率的產生，讓機器性能最大化，為客戶帶來最大的生產效能及利潤。</p>
+                  <div class="btnWrap">
+                    <div class="btnStyle--wrapper">
+                      <a href="./about.html" class="btnStyle" title="了解更多"><span class="txt fa fa-angle-right">了解更多</span> </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="in_prod_box prod_box_left European_step5" style="display:none;">
+              <div class="in_box">
+                <div class="title">高精度、穩定的鋼尺裁斷系統</div>
+                <div class="text clearfix">
+                  <div class="box_r"><img src="./images/prod_1_5.jpg" class="img-responsive" alt>
+                  </div>
+                  <div class="subtitle">鋼尺刀裁外型沖切及下料沖孔沖切</div>
+                  <p>
+                    面臨求新求變的時代，因應少量多樣化的生產，提升交期、降低成本，將是時下最大的需求，而RMD-800使用鋼尺刀裁斷技術，減少鋼模裁斷的模具製造時間及成本，不僅符合現代產製需求，更以伺服驅動凸輪機構來帶動裁斷模做0.02mm的精度重現。
+                  </p>
+                  <div class="btnWrap">
+                    <div class="btnStyle--wrapper">
+                      <a href="./about.html" class="btnStyle" title="了解更多"><span class="txt fa fa-angle-right">了解更多</span> </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="in_prod_box prod_box_left European_step6" style="display:none;">
+              <div class="in_box">
+                <div class="title">自動堆疊技術<br />
+                  完美演繹最後工序</div>
+                <div class="text clearfix">
+                  <div class="box_r"><img src="./images/prod_1_6.jpg" class="img-responsive" alt>
+                  </div>
+                  <p>堆疊─是成型設備的最後一道工序，以自動堆疊方式，不僅可以達到百分之百的數量精準，更可提升食品包裝容器的安
+                    衛生，因為從入料生產到最後的包裝成型，都由機械一步到位，僅需於最後人工裝箱作業，降低生產品汙染及入袋數錯誤的問題。</p>
+                    <div class="btnWrap">
+                      <div class="btnStyle--wrapper">
+                        <a href="./about.html" class="btnStyle" title="了解更多"><span class="txt fa fa-angle-right">了解更多</span> </a>
+                      </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+            <div class="in_prod_pc"><img src="./images/in_pro.png" alt="给袋式包装机" loading="lazy">
+            </div>
+            <div class="in_prod_step">
+              <div class="container">
+                <div class="inner">
+                  <ul class="list-unstyled">
+                    <li id="European_step1" style="left:0;" class="active"><a href="javascript:void(0);"><span
+                          class="disc"></span>给袋式包装机</a></li>
+                    <li id="European_step2" style="left:20%;"><a href="javascript:void(0);"><span
+                          class="disc"></span>温控系统</a></li>
+                    <li id="European_step3" style="left:40%;"><a href="javascript:void(0);"><span
+                          class="disc"></span>主机结构</a></li>
+                    <li id="European_step4" style="left:60%;"><a href="javascript:void(0);"><span
+                          class="disc"></span>PLC系统</a></li>
+                    <li id="European_step5" style="left:80%;"><a href="javascript:void(0);"><span
+                          class="disc"></span>物料填充</a></li>
+                    <li id="European_step6" style="left:100%;"><a href="javascript:void(0);"><span
+                          class="disc"></span>流水线生产</a></li>
+                  </ul>
+                  <span class="filling-line" style="width:0%"></span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="banner-pagination">
+
+        <a class="left carousel-control" href="#carousel_in_product" role="button" data-slide="prev"><i
+            class="fa fa-angle-left"></i></a>
+        <a class="right carousel-control" href="#carousel_in_product" role="button" data-slide="next"><i
+            class="fa fa-angle-right"></i></a>
+      </div>
+    </div>
+    <!-- 产品优势 -->
+    
+    <div class="in_intro">
+      <div class="main-title wow fadeInUp pro-main-tit intro-tit">
+        <h3 class="cn">您是否遇到以下困扰？</h3>
+      </div>
+      <div class="row container">
+        <ul class="f_cb">
+          <li class="" ><b><img alt="自动化流水线生产"
+                src="./images/kunico01.png"></b><em>不知道工厂设备该如何<br>实现自动化流水线生产？</em></li>
+          <li class=""><b><img alt="产品质量"
+                src="./images/kunico02.png"></b><em>担心产品质量不稳定<br>经常故障？</em></li>
+          <li class="" ><b><img alt="技术能力"
+                src="./images/kunico03.png"></b><em>技术能力<br>不过关，影响生产效率？</em></li>
+          <li class=""><b><img alt="售后服务"
+                src="./images/kunico04.png"></b><em>售后服务响应慢<br>跟进不到位，体验差？</em></li>
+        </ul>
+        <div class="btnWrap wow fadeIn">
+          <div class="btnStyle--wrapper">
+            <a href="./about.html" class="btnStyle" title="了解更多"><span class="txt fa fa-angle-right">立即咨询</span> </a>
+          </div>
+        </div>
+        <div class="main-title wow fadeInUp pro-main-tit intro-tit white-tit">
+          <h3 class="cn">温州海翊 - 专业给袋式包装机制造商</h3>
+        </div>
+        <div class="fwcon">
+          <dl class="wow fadeInUp" >
+            <dt>
+              <a href="us_35.html" target="_blank"><img alt="定制方案" src="./images/advantage_01.png"></a>
+            </dt>
+            <dd>
+              <h3>定制方案</h3>
+              <p>我们把为客户开发和提供创新的自动化包装解决方案视为根本。</p>
+            </dd>
+          </dl>
+          <dl class="wow fadeInUp" >
+            <dt>
+              <a href="javascript:;" target="_blank"><img alt="应用领域" src="./images/advantage_02.png"></a>
+            </dt>
+            <dd>
+              <h3>应用领域</h3>
+              <p>在日用、医药化妆、文具礼品、五金电子、纺织等行业得到广泛应用</p>
+            </dd>
+          </dl>
+          <dl class="wow fadeInUp" >
+            <dt>
+              <a href="javascript:;" target="_blank"><img alt="专业技术团队" src="./images/advantage_03.png"></a>
+            </dt>
+            <dd>
+              <h3>技术团队</h3>
+              <p>拥有长期专注包装设备研发的技术团队，丰富的研发生产经验。</p>
+            </dd>
+          </dl>
+          <dl class="wow fadeInUp">
+            <dt>
+              <a href="service.html" target="_blank"><img alt="贴心服务" src="./images/advantage_04.png"></a>
+            </dt>
+            <dd>
+              <h3>贴心服务</h3>
+              <p>提供精细化、高效率的售后服务，从而保障客户利益更大化。</p>
+            </dd>
+          </dl>
+        </div>
+      </div>
+    </div>
+    <!-- 产品优势结束 -->
+    <!-- 地图 -->
+    <div class="map wow fadeInUp animated">
+      <div class="map-img"><img src="./images/world-map.jpg" alt="温州海翊机械有限公司"></div>
+      <div class="map-show">
           <div class="container">
-            <div class="swiper-pagination home-section1-pagination"></div>
+            <div class="main-title wow fadeInUp pro-main-tit intro-tit">
+              <h3 class="cn">以精工回报社会，以专注赢得大市场</h3>
+            </div>
           </div>
-        </div>
       </div>
-      <div class="mouse"><img src="./images/mouse.png" alt=""></div>
-    </div>
-    <!-- 轮播图区域结束 -->
-    <!-- 关于我们区域 -->
-    <div class="home-section2">
+  </div>
+     <!-- news start -->
+     <div class="index-news">
       <div class="container">
-        <div class="flexbox">
-          <div class="img-box wow fadeInUp" data-wow-delay="0.1s">
-            <div class="maskfadeUp wow" data-wow-delay="0.7s"></div>
-            <a href="./about.html"><img src="./images/about1.jpg" alt=""></a>
-          </div>
-          <div class="rightbox">
-            <h2>ABOUT<br>COMPANY</h2>
-            <p class="tit">关于我们</p>
-            <div class="des">
-              <p><span
-                  style="color: rgb(102, 102, 102); font-family: 微软雅黑; font-size: 14px; background-color: rgb(255, 255, 255);">广东省绿革环保科技有限公司（以下简称：绿革）始创于2005年，多年一直致力于环保能源领域的研究与应用，是掌握世界顶尖除湿热泵技术，研发多类相关除湿烘干设备，并拥有三大研发生产基地的国家高新技术企业。</span>
+        <div class="main-title wow fadeInUp new-tit  pro-main-tit">
+          <h3 class="cn">新闻资讯</h3>
+        </div>
+        <div class="NewsList wow fadeInUp">
+          <div class="NewsList-item">
+            <div class="img">
+              <a href="./news.html" target="_blank"
+                ><img
+                 
+                  src="./images/new.jpg"
+                  alt=""
+              /></a>
+            </div>
+            <div class="txt">
+              <div class="info"></div>
+              <a href="./news.html" target="_blank">
+                <h4>新闻标题</h4>
+              </a>
+              <p>
+                新闻描述新闻描述新闻描述新闻描述新闻描述新闻描述新闻描述新闻描述
               </p>
+              <div class="info">
+                <span class="date">2024-3-5</span>
+                
+              </div>
             </div>
-            <a href="./about.html" class="more">MORE<img src="./images/sec2more.png" alt=""></a>
+          </div>
+          <div class="NewsList-item">
+            <div class="img">
+              <a href="./news.html" target="_blank"
+                ><img
+                 
+                  src="./images/new.jpg"
+                  alt=""
+              /></a>
+            </div>
+            <div class="txt">
+              <div class="info"></div>
+              <a href="./news.html" target="_blank">
+                <h4>新闻标题</h4>
+              </a>
+              <p>
+                新闻描述新闻描述新闻描述新闻描述新闻描述新闻描述新闻描述新闻描述
+              </p>
+              <div class="info">
+                <span class="date">2024-3-5</span>
+                
+              </div>
+            </div>
+          </div>
+          <div class="NewsList-item">
+            <div class="img">
+              <a href="./news.html" target="_blank"
+                ><img
+                 
+                  src="./images/new.jpg"
+                  alt=""
+              /></a>
+            </div>
+            <div class="txt">
+              <div class="info"></div>
+              <a href="./news.html" target="_blank">
+                <h4>新闻标题</h4>
+              </a>
+              <p>
+                新闻描述新闻描述新闻描述新闻描述新闻描述新闻描述新闻描述新闻描述
+              </p>
+              <div class="info">
+                <span class="date">2024-3-5</span>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+        <div class="btnWrap wow fadeIn">
+          <div class="btnStyle--wrapper">
+            <a href="./about.html" class="btnStyle" title="了解更多"><span class="txt fa fa-angle-right">了解更多</span> </a>
           </div>
         </div>
       </div>
     </div>
-    <!-- 关于我们区域结束 -->
-    <!-- 产品展示 -->
-    <div class="home-section3">
+    <!-- news end -->
+    <!-- 地图结束 -->
+  </article>
+  <footer>
+    <div id="footer_gary">
       <div class="container">
-        <div class="flexbox">
-          <div class="leftbox">
-            <h2>PRODUCT<br>DISPLAY</h2>
-            <p class="tit">产品展示</p>
-            <div class="img-box wow fadeInUp" data-wow-delay="0.1s">
-              <div class="maskfadeUp wow" data-wow-delay="0.7s"></div>
-              <img src="./images/sec3img.jpg" alt="">
-            </div>
+        <div class="row">
+          <div class="col-xs-6 col-sm-4 foot_link foot_comp">
+            <div class="title">关于我们</div>
+            <ul class="list-unstyled">
+              <li><a href="./about.html" title="关于我们">关于我们</a></li>
+              <li><a href="./about.html" title="荣誉中心">荣誉中心</a></li>
+              <li><a href="./about.html" title="生产车间">生产车间</a></li>
+              <li><a href="./about.html" title="企业文化">企业文化</a></li>
+            </ul>
           </div>
-          <div class="rightbox">
-            <div class="top-swiper">
-              <div class="swiper-container home-section3-top">
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide">
-                    <div class="item">
-                      <a href="/product_show.html">
-                        <img class="itemimg" src="./images/pro1.jpg" alt="">
-                        <div class="mask">
-                          <h4>连续蒸汽式污泥干化机</h4>
-                          <div class="tips">六效干化，两倍行业标准</div>
-                          <p class="des">具有强大的干化减量能力，干泥含水率≤10%-50%可调，减量高达80%以上，颠覆传统干化方式存在的干泥含水率高、减量能力弱的技术瓶颈。</p>
-                          <div class="more">MORE<img src="./images/sec3more.png" alt=""></div>
-                        </div>
-                      </a>
-                    </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="item">
-                      <a href="./product_show.html">
-                        <img class="itemimg" src="./images/pro2.jpg" alt="">
-                        <div class="mask">
-                          <h4>连续热泵式污泥干化机</h4>
-                          <div class="tips">六效干化，两倍行业标准</div>
-                          <p class="des">六效干化，两倍行业标准</p>
-                          <div class="more">MORE<img src="./images/sec3more.png" alt=""></div>
-                        </div>
-                      </a>
-                    </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="item">
-                      <a href="/product_show.html">
-                        <img class="itemimg" src="./images/pro3.jpg" alt="">
-                        <div class="mask">
-                          <h4>批次热泵式污泥干化机</h4>
-                          <div class="tips">一体化设计，厂房建设要求低</div>
-                          <p class="des">具有强大的干化减量能力，干泥含水率≤10%-50%可调，减量高达80%以上，颠覆传统干化方式存在的干泥含水率高、减量能力弱的技术瓶颈。</p>
-                          <div class="more">MORE<img src="./images/sec3more.png" alt=""></div>
-                        </div>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-container home-section3-thumbs">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                  <div class="item"><img src="./images/pro1.jpg" alt=""></div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="item"><img src="./images/pro2.jpg" alt=""></div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="item"><img src="./images/pro3.jpg" alt=""></div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="item more">
-                    <a href="/chanpinzhongxin">
-                      <img src="./images/sec3ico.png" alt="">
-                      <p>更多产品</p>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
+          <div class="col-xs-6 col-sm-4 foot_link foot_solu">
+            <div class="title">解決方案</div>
+            <ul class="list-unstyled">
+              <li><a href="./solutions.html" title="食品行业解决方案">食品行业解决方案</a></li>
+              <li><a href="./solutions.html" title="日化品行业解决方案">日化品行业解决方案</a></li>
+              <li><a href="./solutions.html" title="药品行业解决方案">药品行业解决方案</a></li>
+              <li><a href="./solutions.html" title="保健品行业解决方案">保健品行业解决方案</a></li>
+              <li><a href="./solutions.html" title="其他行业解决方案">其他行业解决方案</a></li>
+            </ul>
+          </div>
+          <div class="col-xs-12 col-sm-4 foot_link foot_prod">
+            <div class="title">产品中心</div>
+            <ul class="list-unstyled">
+              <li><a href="./product_show.html" title="产品名称1">产品名称1</a></li>
+              <li><a href="./product_show.html" title="产品名称2">产品名称2</a></li>
+              <li><a href="./product_show.html" title="产品名称3">产品名称3</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-xs-6 col-sm-4 foot_link foot_news">
+            <div class="title">新闻中心</div>
+            <ul class="list-unstyled">
+              <li><a href="./news.html" title="展会信息">展会信息</a></li>
+              <li><a href="./news.html" title="行业资讯">行业资讯</a></li>
+            </ul>
+          </div>
+          <div class="col-xs-6 col-sm-4 foot_link foot_down">
+            <div class="title">温州海翊机械有限公司</div>
+            <ul class="list-unstyled">
+              <li><p>—  电 话：0577-65657771</p></li>
+              <li><p>—  手 机：189-5873-6231</p></li>
+              <li><p>—  邮 箱：haiyipack@163.com</p></li>
+              <li><p>—  地 址：浙江省瑞安市经济开发区敬业路1088号</p></li>
+            </ul>
           </div>
         </div>
       </div>
     </div>
-    <!-- 产品展示结束 -->
-    <!-- 成功案例 -->
-    <div class="home-section4">
+    <div id="footer_dark">
       <div class="container">
-        <div class="flexbox">
-          <div class="rightbox">
-            <div class="head">
-              <h2>CASE<br>SUCCESSFUL</h2>
-              <p class="tit">成功案例</p>
-            </div>
-            <div class="swiper-box">
-              <div class="swiper-container home-section4-swiper">
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide no-swiper">
-                    <div class="item">
-                      <h4>佛山佳利达环保股份有限公司</h4>
-                      <p class="des">
-                        佛山市佳利达环保科技股份有限公司属于中外合资企业（以下简称“佳利达公司”）于2002年9月25日成立，注册资本为1.6亿元，固定资产投资总额超12亿元；公司位于佛山市三水区大塘工业园兴唐路10号，占地面积33万平方米，厂房20万平方米，公司现有员工近600人，工程技术人员近100人，拥有高中级职称人员20多人，专业领域覆盖热动工程、仪器仪表工程、自动控制、环境工程、新能源开发与应用、生物质能、工业节能、化工热能及太阳能等方面，骨干人员拥有20多年的行业经验。
-                      </p>
-                    </div>
-                  </div>
-                  <div class="swiper-slide no-swiper">
-                    <div class="item">
-                      <h4>日月光集团</h4>
-                      <p class="des">
-                        日月光集团为全球大半导体封装、测试及材料大厂，自1984年成立以来，为全球半导体知名业者提供整合型测试、封装、系统组装及成品运输的专业一元化服务，在全球封装测试代工产业中，拥有完整的供应链系统。集团的全球营运及生产据点涵盖中国地区(含台湾)、韩国、日本、马来西亚、新加坡、美国、墨西哥与欧洲多个国家，已先后购并Motorola、ISE及NEC的封装、测试工厂，全球员工人数超过三万人；秉持积极研究发展与优质产品，赢得客户信赖及肯定。
-                      </p>
-                    </div>
-                  </div>
-                  <div class="swiper-slide no-swiper">
-                    <div class="item">
-                      <h4>雅戈尔集团</h4>
-                      <p class="des">雅戈尔集团创建于1979年，总部位于东海之滨的浙江省宁波市，是全国纺织服装行业龙头企业。2018年度实现销售收入879亿元，利润总额54亿元，实
-                        缴税收23亿元，位居中国民营企业500强前列。截止2018年底，雅戈尔集团总资产939亿，净资产310亿元。旗下雅戈尔集团股份有限公司于1998年11月19日在上海证券交易所挂牌上市，股票代码：600177，股票简称：雅戈尔。
-                        经过40年的发展，雅戈尔已形成以品牌发展为核心，多元并进、专业化发展的综合性国际化企业集团。</p>
-                    </div>
-                  </div>
-                  <div class="swiper-slide no-swiper">
-                    <div class="item">
-                      <h4>清溪厨余垃圾处理中心</h4>
-                      <p class="des">针对镇内餐厅/饭馆熟厨余与果蔬市场的生厨余进行降解处理，每日厨余的最大处理量为40吨/日，设备包含厨余污水处理系统，每日污水最大处理量为20吨/日
-                        厨余厂内包含除臭系统，能有效消除降解过程中产生的异味，符合环境环保要求。</p>
-                    </div>
-                  </div>
-                  <div class="swiper-slide no-swiper">
-                    <div class="item">
-                      <h4>道滘厨余垃圾处理中心</h4>
-                      <p class="des">针对镇内餐厅/饭馆熟厨余与果蔬市场的生厨余进行降解处理，每日厨余的最大处理量为20吨/日。
-                        厨余厂内包含除臭系统，能有效消除降解过程中产生的异味，符合环境环保要求。</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-bottom-operate">
-                <div class="left-sec">
-                  <span></span>
-                  <div class="swiper-button-prev home-section4-prev"></div>
-                  <div class="swiper-button-next home-section4-next"></div>
-                </div>
-                <div class="right-sec">
-                  <div class="swiper-pagination home-section4-pagination"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="swiper-container home-section4-bgswiper">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <div class="secbg"><img src="./images/case1.jpg" alt=""></div>
-          </div>
-          <div class="swiper-slide">
-            <div class="secbg"><img src="./images/case2.jpg" alt=""></div>
-          </div>
-          <div class="swiper-slide">
-            <div class="secbg"><img src="./images/case3.jpg" alt=""></div>
-          </div>
-          <div class="swiper-slide">
-            <div class="secbg"><img src="./images/case4.jpg" alt=""></div>
-          </div>
-          <div class="swiper-slide">
-            <div class="secbg"><img src="./images/case5.jpg" alt=""></div>
+        <div class="row">
+          <div class="copyright col-md-8">
+            <span class="pol">
+            </span>版权所有©温州海翊机械有限公司
           </div>
         </div>
       </div>
     </div>
-    <!-- 成功案例结束 -->
-    <!-- 业务范围 -->
-    <div class="home-section5">
-      <div class="container">
-        <div class="flexbox">
-          <div class="leftbox">
-            <h2>BUSINESS<br>DISTRIBUTION MAP</h2>
-            <p class="tit">业务范围</p>
-            <p class="des">绿革环保全球业务范围分布图</p>
-          </div>
-          <div class="rightbox">
-            <div class="bussiness-map hidden-sm hidden-xs">
-              <img src="./images/business-map-none.png" alt="">
-              <div class="appoint a1">
-                <div class="i"></div>
-              </div>
-              <div class="appoint a2">
-                <div class="i"></div>
-              </div>
-              <div class="appoint a3">
-                <div class="i"></div>
-              </div>
-              <div class="appoint a4">
-                <div class="i"></div>
-              </div>
-              <div class="appoint a5">
-                <div class="i"></div>
-              </div>
-              <div class="appoint a6">
-                <div class="i"></div>
-              </div>
-              <div class="appoint a7">
-                <div class="i"></div>
-              </div>
-              <div class="appoint a8">
-                <div class="i"></div>
-              </div>
-              <div class="appoint a9">
-                <div class="i"></div>
-              </div>
-              <div class="appoint a10">
-                <div class="i"></div>
-              </div>
-              <div class="appoint a11">
-                <div class="i"></div>
-              </div>
-              <div class="appoint a12">
-                <div class="i"></div>
-              </div>
-              <div class="appoint a13">
-                <div class="i"></div>
-              </div>
-              <div class="appoint a14">
-                <div class="i"></div>
-              </div>
-              <div class="appoint a15">
-                <div class="i"></div>
-              </div>
-              <div class="appoint a16">
-                <div class="i"></div>
-              </div>
-              <div class="appoint a17">
-                <div class="i"></div>
-              </div>
-              <div class="appoint a18">
-                <div class="i"></div>
-              </div>
-              <div class="appoint a19">
-                <div class="i"></div>
-              </div>
-              <div class="appoint a20">
-                <div class="i"></div>
-              </div>
-              <div class="appoint a21">
-                <div class="i"></div>
-              </div>
-              <div class="appoint a22">
-                <div class="i"></div>
-              </div>
-              <div class="appoint a23">
-                <div class="i"></div>
-              </div>
-              <div class="appoint a24">
-                <div class="i"></div>
-              </div>
-            </div>
-            <div class="bussiness-map visible-sm visible-xs">
-              <img src="./images/business-map.png" alt="">
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- 业务范围结束 -->
-    <!-- 新闻区域 -->
-    <div class="home-section6 wow slideInLeft">
-      <div class="container">
-        <div class="secbg">从一眼清新到整个岁月，绿革一直都在</div>
-      </div>
-    </div>
-    <div class="home-section7">
-      <div class="container">
-        <div class="flexbox">
-          <div class="leftbox">
-            <h2>NEWS<br>DYNAMIC</h2>
-            <p class="tit">新闻动态</p>
-            <div class="home-section7-tabs">
-              <a href="javascript:;" class="active">绿革新闻</a>
-              <a href="javascript:;">行业资讯</a>
-            </div>
-          </div>
-          <div class="rightbox">
-            <div class="swiper-container home-section7-swiper">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide no-swiper">
-                  <div class="slideflex">
-                    <div class="img-box wow fadeInUp" data-wow-delay="0.1s">
-                      <div class="maskfadeUp wow" data-wow-delay="0.7s"></div>
-                      <img src="./images/new1.jpg" alt="">
-                    </div>
-                    <div class="newsList wow fadeInRight" data-wow-delay="0.1s">
-                      <div class="item">
-                        <a href="./new_show.html">
-                          <div class="date">
-                            <p class="day">26</p>
-                            <p class="time">2020-10</p>
-                          </div>
-                          <div class="info">
-                            <h4>工业污泥干燥机设备的核心是什么？</h4>
-                            <p class="des">污泥干燥机是一种非常有效节能的设备，能够清除高含水率污泥中的水分(含水率80%的污泥能够脱水到20%
-                              )，有助于降低工业企业的环保成本，节约公司年度环保专业投资。在工业生产领域，许多企业在拥有污泥排放的同时，打着专门的招牌，环保公司对这些污</p>
-                          </div>
-                        </a>
-                      </div>
-                      <div class="item">
-                        <a href="./new_show.html">
-                          <div class="date">
-                            <p class="day">20</p>
-                            <p class="time">2020-10</p>
-                          </div>
-                          <div class="info">
-                            <h4>如何正确使用污泥干燥机？污泥干燥机厂家来告诉您</h4>
-                            <p class="des">
-                              近年来环保问题也成为国家努力的重点，因此大多数企业一直在尽可能减少造成环境污染。随之特殊时期的发展，污泥干燥机由于其本身的性能优势，发挥良好的干燥处理效果，备受到各生产厂家的青睐。然而，污泥干燥机随着长期连续不断运行，加工量大，加工过程中不
-                            </p>
-                          </div>
-                        </a>
-                      </div>
-                      <div class="item">
-                        <a href="./new_show.html">
-                          <div class="date">
-                            <p class="day">12</p>
-                            <p class="time">2020-10</p>
-                          </div>
-                          <div class="info">
-                            <h4>带您分析污泥干燥机怎么节能的呢？</h4>
-                            <p class="des">&nbsp; &nbsp; &nbsp;
-                              &nbsp;污泥干燥机不同于传统的热空气干燥机，后者是导电干燥设备。污泥干燥机由穿过W形缸的两个主轴组成，两个主轴焊接有扇形叶片，叶片和主轴是中空的，是内部热源，例如传热油，蒸汽，烟道气等。
-                              W形圆</p>
-                          </div>
-                        </a>
-                      </div>
-                      <div class="item">
-                        <a href="./new_show.html">
-                          <div class="date">
-                            <p class="day">09</p>
-                            <p class="time">2020-10</p>
-                          </div>
-                          <div class="info">
-                            <h4>污泥干燥机的用途你知道吗？</h4>
-                            <p class="des">
-                              今天来给大家介绍一下污泥干燥机的用途。污泥干燥机是一种间接性加热的低速搅拌干燥机。设备的内部会设有两根或者是四根的空心转动轴。结构设计都比较的特殊和巧妙。轴体是相对转动的，会根据角的速度相同而线的速度不同的原理来达到使轴体上的污泥自行清理的
-                            </p>
-                          </div>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide no-swiper">
-                  <div class="slideflex">
-                    <div class="img-box wow fadeInUp" data-wow-delay="0.1s">
-                      <div class="maskfadeUp wow" data-wow-delay="0.7s"></div>
-                      <img src="./images/new1.jpg" alt="">
-                    </div>
-                    <div class="newsList wow fadeInRight" data-wow-delay="0.1s">
-                      <div class="item">
-                        <a href="./new_show.html">
-                          <div class="date">
-                            <p class="day">26</p>
-                            <p class="time">2019-11</p>
-                          </div>
-                          <div class="info">
-                            <h4>污泥干化机设备的类型有哪些?</h4>
-                            <p class="des">
-                              　　污水中的大部分污染物在处理过程中转化为污泥，因此污泥中含有各种覆盖面极广的污染物，包括各种重金属、微量剧毒有机物(PCBs、AOX等)，大量病原微生物，如细菌、病毒体和寄生虫卵，如不妥善处理，将会引发环境卫生和污染问题，易造成二次污染，我国大规模建设污水水处理厂，但污泥处理处置一直被忽视，近年来污水干化技术发展迅速，下面就介绍几种重要的污泥
-                            </p>
-                          </div>
-                        </a>
-                      </div>
-                      <div class="item">
-                        <a href="./new_show.html">
-                          <div class="date">
-                            <p class="day">23</p>
-                            <p class="time">2019-11</p>
-                          </div>
-                          <div class="info">
-                            <h4>污泥干化机该怎么选择？选择很重要！</h4>
-                            <p class="des">
-                              　　当许多废物生产企业的污泥需要减少和干燥时，他们会尽快赶到医生那里解决问题。桨叶式、圆盘式和回转窑式的各种干燥设备已经过检查，但最终他们可能没有选择他们喜欢的干燥设备。那么应该如何选择污泥干燥设备呢?现在做污泥干化设备的公司很多，产品质量良莠不齐，下面给您在购置烘干设备式进行一些提示!
-                            </p>
-                          </div>
-                        </a>
-                      </div>
-                      <div class="item">
-                        <a href="./new_show.html">
-                          <div class="date">
-                            <p class="day">31</p>
-                            <p class="time">2019-10</p>
-                          </div>
-                          <div class="info">
-                            <h4>绿革污泥干化机:低温污泥干化技术</h4>
-                            <p class="des">
-                              低温污泥干化技术，把初脱水（叠螺式干化机、板框式压滤机）后含水率80%-85%污泥，通过低温干化系统，利用热泵技术，经过空气循环和制冷循环两个过程，将含水率80%-85%污泥干化至含水率10%-50%干泥。低温污泥干化技术只需消耗电能，无其他能源消耗。
-
-                            </p>
-                          </div>
-                        </a>
-                      </div>
-                      <div class="item">
-                        <a href="./new_show.html">
-                          <div class="date">
-                            <p class="day">12</p>
-                            <p class="time">2019-10</p>
-                          </div>
-                          <div class="info">
-                            <h4>怎样调节环保污泥干化机的温度差？</h4>
-                            <p class="des">
-                              ​运用强制性自然通风作用来减少从上向下的温度差，您能够在操作过程调节环保污泥干化机的气体分派板以超过溫度均衡。假如溫度低，提升点周边的导风叶子中间的空隙；假如溫度很高，降低空隙。再次调节直到超过溫度均衡。如果提前准备好，就不用再次调节。
-                            </p>
-                          </div>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- 如果需要分页器 -->
-              <div class="swiper-pagination"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- 新闻区域结束 -->
-  </div>
-  <!-- 页面内容区域结束 -->
-  <!-- 页脚区域 -->
-  <div class="fixdright">
-    <div class="lt">
-      <a href="tel:189XXXX" class="tel">
-        <div class="font">
-          189XXXX
-        </div>
-        <i><img src="./images/jian3-1.png"><img src="./images/jian3.png"></i>
-      </a>
-      <a href="javascript:;" onclick="goTop()" class="top">
-        <i><img src="./images/jian1.png"><img src="./images/jian1-1.png"></i>
-      </a>
-    </div>
-  </div>
-  <div class="home-footer">
-    <div class="container">
-      <div class="flogo">
-        <a href="#"><img src="./images/flogo.png" alt=""></a>
-      </div>
-      <ul class="fnavmenu">
-        <li><a href="./index.html">首页</a></li>
-        <li><a href="./about.html">关于我们</a></li>
-        <li><a href="./product.html">产品中心</a></li>
-        <li><a href="./case.html">成功案例</a></li>
-        <li><a href="./video.html">视频中心</a></li>
-        <li><a href="./news.html">新闻中心</a></li>
-        <li><a href="./contact.html">联系我们</a></li>
-      </ul>
-      <div class="eweima">
-
-      </div>
-      <p class="copyright">公司备案 <a href="https://beian.miit.gov.cn/" target="_blank"></a> <a href="">技术支持：联创</a></p>
-    </div>
-  </div>
-  <!-- 页脚区域结束 -->
-  <script src="./js/jquery.min.js"></script>
-  <script src="./js/swiper.min.js"></script>
-  <script src="./js/swiper.animate.min.js"></script>
+    <a href="#" class="btn-top" id="top">
+      <img src="./images/btn_top.svg">回上方 </a>
+  </footer>
+  <!--slick.js-->
+  <link href="./css/animate.css" rel="stylesheet">
   <script src="./js/wow.min.js"></script>
-  <script src="./js/main.js"></script>
-  <script type="text/javascript">
-    function goTop() {
-      $('html,body').animate({
-        'scrollTop': 0
-      }, 1000);
-    }
-
-    function headscroll() {
-      var scrollTop = $(this).scrollTop();
-      if (scrollTop > 0) {
-        $('header').stop().addClass('head_active');
-        $(".fixdright .top").addClass("on");
-
-      } else {
-        $(".fixdright .top").removeClass("on");
-        $('header').stop().removeClass('head_active');
-      }
+  <script>
+    if (!(/msie [6|7|8|9]/i.test(navigator.userAgent))) {
+      new WOW().init();
     };
-
-    headscroll();
-    $(window).scroll(function () {
-      headscroll();
-      var scrollTop1 = $(this).scrollTop();
-      if (scrollTop1 > 200) {
-        $(".fixdright .top").addClass("on");
-
-      } else {
-        $(".fixdright .top").removeClass("on");
-      }
-    });
   </script>
+
 </body>
 
 </html>

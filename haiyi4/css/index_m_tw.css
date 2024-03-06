@@ -1,0 +1,21 @@
+@charset "UTF-8";
+@import url(./index_m_en.css);
+
+@media screen and (min-width: 768px) {	
+.in_prod_pc.European_pc4 {    transform: translate(-36%, -3%);}
+.in_prod_pc.Japanese_pc2 {    transform: translate(34%, -13%);}
+.in_prod_pc.Japanese_pc3 {   transform: translate(-0.5%, -6%);}
+.in_prod_pc.Japanese_pc4 {   transform: translate(-22.5%, -12%);}
+.in_prod_pc.Japanese_pc5{transform: translate(-31.5%, -13%);}
+.in_prod_pc.Japanese_pc7{transform: translate(-79%, -20%);}
+}
+@media screen and (min-width: 768px) {
+.in_box .subtitle{ margin-bottom: 10px; }	
+.European_step2 .in_box .text p,.European_step3 .in_box .text p,.European_step4 .in_box .text p,.European_step5 .in_box .text p,.European_step6 .in_box .text p{ max-height: 3rem; }
+}
+
+@media (max-width: 480px){
+#banner1 .bannertxt .inbtext2,#banner2 .bannertxt .inbtext2,#banner4 .bannertxt .inbtext2,#video .bannertxt .inbtext2,#banner3 .bannertxt .inbtext1, #index_banner .flexslider .slides > li:nth-child(n+5) .inbtext1{ font-size:27px; }
+#banner1 .bannertxt .inbtext1,#banner2 .bannertxt .inbtext1,#banner4 .bannertxt .inbtext1,#video .bannertxt .inbtext1,#banner3 .bannertxt .inbtext2, #index_banner .flexslider .slides > li:nth-child(n+5) .inbtext2{ font-size:22px;}
+#logo{ width:220px;}
+}
