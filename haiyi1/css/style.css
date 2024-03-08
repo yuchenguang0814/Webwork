@@ -199,9 +199,7 @@ html {
   font-size: 62.5%;
 }
 body {
-  font-family: "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", YuGothic,
-    "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo,
-    verdana, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   -webkit-text-size-adjust: 100%;
   word-wrap: break-word;
   line-break: strict;
@@ -10329,7 +10327,6 @@ body.product.index .link_thumb__desc {
   }
 }
 .recruit.about .about__heading {
-  font-family: "游ゴシック体", YuGothic;
   -ms-flex-negative: 0;
   flex-shrink: 0;
   font-weight: 700;
@@ -10463,7 +10460,6 @@ body.product.index .link_thumb__desc {
   border-bottom: none;
 }
 .recruit.recruit_entry .recruit_entry__form__heading {
-  font-family: "游ゴシック体", YuGothic;
   font-size: 2rem;
   font-weight: 700;
   text-align: center;
@@ -10488,7 +10484,6 @@ body.product.index .link_thumb__desc {
   border-top: none;
 }
 .recruit.recruit_entry .recruit_entry__form label {
-  font-family: "游ゴシック体", YuGothic;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -10710,7 +10705,6 @@ body.product.index .link_thumb__desc {
   width: 100px;
 }
 .recruit.recruit_entry .recruit_entry__notice {
-  font-family: "游ゴシック体", YuGothic;
   text-align: center;
   padding: 30px 20px;
   background-color: #eee;
@@ -10847,7 +10841,6 @@ body.product.index .link_thumb__desc {
   }
 }
 .recruit .faq__heading {
-  font-family: "游ゴシック体", YuGothic;
   -ms-flex-negative: 0;
   flex-shrink: 0;
   font-weight: 700;
@@ -11592,7 +11585,6 @@ body.recruit .recruit_cv__desc {
   font-size: 1.6rem;
 }
 body.recruit .recruit_cv__desc span {
-  font-family: "游ゴシック Medium", "Yu Gothic Medium";
 }
 @media all and (max-width: 767px) {
   body.recruit .recruit_cv__desc {
@@ -11991,7 +11983,6 @@ body.recruit .recruit_faq__list__item a:hover {
   background-color: #f5f5f5;
 }
 body.recruit .recruit_faq__list__q {
-  font-family: "游ゴシック体", YuGothic;
   font-weight: 700;
   color: #333;
 }
@@ -12098,7 +12089,6 @@ body.recruit .recruit_faq__list__toggle.-active::before {
   transform: rotate(360deg);
 }
 body.recruit .recruit_faq__more a {
-  font-family: "游ゴシック体", YuGothic;
   margin-left: auto;
   margin-right: 0;
   display: -webkit-box;
@@ -12193,7 +12183,6 @@ body.recruit .recruit_news__list__item a:hover {
   background-color: #f5f5f5;
 }
 body.recruit .recruit_news__list__item__date {
-  font-family: "游ゴシック体", YuGothic;
   color: #0071be;
   font-weight: 700;
   width: 105px;
@@ -12210,7 +12199,6 @@ body.recruit .recruit_news__list__item__title {
   flex-shrink: 1;
 }
 body.recruit .recruit_news__more a {
-  font-family: "游ゴシック体", YuGothic;
   margin-left: auto;
   margin-right: 0;
   display: -webkit-box;
@@ -12487,7 +12475,6 @@ body.recruit .site_footer ::before {
   font-weight: 700;
 }
 body.recruit .site_footer__list__item a {
-  font-family: "游ゴシック体", YuGothic;
   color: #333;
 }
 body.recruit .site_footer__list__item a:not(.site_footer__list__heading):hover {
@@ -12506,9 +12493,6 @@ body.recruit .site_footer__list__toggle {
   body.recruit .site_footer__child_list__item > a {
     background-color: #f5f5f5;
   }
-}
-body.recruit .site_footer__copyright {
-  font-family: "游ゴシック体", YuGothic;
 }
 body.recruit .recruit_archive {
   margin-top: 40px;

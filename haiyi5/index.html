@@ -136,7 +136,8 @@
 									<a href="video.html" title="视频中心"><span>视频中心</span></a>
 									<div class="xiala">
 										<div class="container">
-											<div class="nav2_r"><img src="./images/nav-video.jpg" title="成功案例" alt="视频中心"></div>
+											<div class="nav2_r"><img src="./images/nav-video.jpg" title="成功案例" alt="视频中心">
+											</div>
 											<div class="nav2_l nav-er-box">
 												<div class="desc">
 													<div class="en">视频中心</div>
@@ -603,7 +604,7 @@
 	    <div class="up_it">
 	        <div class="up_it_video">
 	            <img src="./images/BBB.jpg" alt="" class="max_767px" style="object-fit: cover;">
-	            <video src="./images/video.mp4" class="none_767px" autoplay="" muted="" loop="" poster="./images/BBB.jpg" preload="metadata"></video>
+	            <video src="./images/difit_0.mp4" class="none_767px" autoplay="" muted="" loop="" poster="./images/BBB.jpg" preload="metadata"></video>
 	            <div class="back_black">
 	                <div class="back_black_f">
 	                    <div class="animated wow fadeInUp animated" data-wow-duration="800ms">
@@ -1364,7 +1365,33 @@ $(".advantage_btn a").each(function(s){
             },
         },
     })
+		document.oncontextmenu=new Function("event.returnValue=false"); document.onselectstart=new Function("event.returnValue=false"); 
+document.oncontextmenu=function(e){return false;}
+function click(e) {
+ if (document.all) {
+ if (event.button == 2 || event.button == 3) {
+ alert("欢迎光临寒舍，有什么需要帮忙的话，请与站长联系！谢谢您的合作！！！");
+          oncontextmenu = 'return false';
+        }
+      }
+ if (document.layers) {
+ if (e.which == 3) {
+          oncontextmenu = 'return false';
+        }
+      }
+    }
+ if (document.layers) {
+      document.captureEvents(Event.MOUSEDOWN);
+    }
+    document.onmousedown = click;
+    document.oncontextmenu = new Function("return false;")
 
+    document.onkeydown = document.onkeyup = document.onkeypress = function () {
+ if (window.event.keyCode == 123) {
+        window.event.returnValue = false;
+ return (false);
+      }
+    }
 			</script>
 
 </body>

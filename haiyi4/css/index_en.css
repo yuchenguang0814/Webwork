@@ -71,13 +71,13 @@
 .in_prod_pc .European_zoomOut{ width:100%;}
 .in_prod_pc.European_pc1{transform: translate(0, 0);}
 .in_prod_pc.European_pc2{transform: translate(-18%, 14%);}
-.in_prod_pc.European_pc3{transform: translate(-38%, -1%);}
+.in_prod_pc.European_pc3{transform: translate(-20%, -40%);}
 .in_prod_pc.European_pc4{transform: translate(3%, 11%);}
 .in_prod_pc.European_pc5{transform: translate(-7%, 12%);}
-.in_prod_pc.European_pc6{transform: translate(-19%, 17%);}
+.in_prod_pc.European_pc6{transform: translate(13%, -18%);}
 
 .European_step2 .in_box{right:0;}
-.European_step3 .in_box{right:0;}
+.European_step3 .in_box{left:400px; top: 100px;}
 .European_step4 .in_box{ left:0}
 .European_step5 .in_box{ left:0}
 .European_step6 .in_box{ left:0}

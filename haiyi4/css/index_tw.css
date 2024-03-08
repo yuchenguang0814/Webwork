@@ -13,9 +13,9 @@ body{ text-align:justify}
 
 @media (min-width: 1441px) {	
 .in_company .text{ line-height:160%;  font-size:1.1rem;}
-.in_prod_pc.European_pc2{transform: translate(-18%, 5%);}
-.in_prod_pc.European_pc4{transform: translate(3%, 6%);}
-.in_prod_pc.European_pc5{transform: translate(-7%, 4%);}
+.in_prod_pc.European_pc2{transform: translate(-24%, -34%);}
+.in_prod_pc.European_pc4{transform: translate(26%,-28%);}
+.in_prod_pc.European_pc5{transform: translate(27%, -8%);}
 .in_prod_pc.Japanese_pc6{transform: translate(-44%, 1%);}
 }
 
@@ -39,4 +39,12 @@ body{ text-align:justify}
 .in_prod_pc.Japanese_pc4{transform: translate(-52%, 10%);}
 .in_prod_pc.Japanese_pc6{transform: translate(-37%, 13%);}
 .in_prod_pc.Japanese_pc7{transform: translate(-107%, -1%);}
+}
+
+.European_step2 {
+  left: 200px;
+  top: 0px;
+}
+.European_step2 .in_box:before {
+  top: 100px;
 }

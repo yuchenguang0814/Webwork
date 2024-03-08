@@ -1561,7 +1561,9 @@ min-width: 94%; */
 .home-section4 {
 	position: relative;
 	padding: 150px 0 120px;
+	margin-top: 90px;
 }
+
 
 @media (max-width: 1440px) {
 	.home-section4 {
@@ -1591,7 +1593,7 @@ min-width: 94%; */
 	width: 100%;
 	z-index: 10;
 	display: flex;
-	justify-content: flex-end;
+	justify-content: flex-start;
 }
 
 @media (max-width: 1440px) {

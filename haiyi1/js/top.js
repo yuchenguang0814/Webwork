@@ -27,7 +27,13 @@ PUNITED || (PUNITED = {}),
      
       (s.intro = function () {
         Cookies.get("visited") ? $("body.top").addClass("introFinish"): (Cookies.set("visited", !0, { expires: 30, path: "" }),
-        
+        // setTimeout(function(){
+        //   $(".intro__bg__1").addClass("-fire"),
+        //   setTimeout(function () {
+        //     $("body.top").addClass("introFinish");
+        //   },300)
+        // },600)
+
             setTimeout(function () {
               $(".intro__bg__1").addClass("-fire"),
                 setTimeout(function () {
@@ -36,10 +42,10 @@ PUNITED || (PUNITED = {}),
                       $(".intro__bg__3").addClass("-fire"),
                         setTimeout(function () {
                           $("body.top").addClass("introFinish");
-                        }, 2e3);
-                    }, 400);
-                }, 400);
-            }, 1500));
+                        }, 800);
+                    }, 350);
+                }, 350);
+            }, 600));
       });
   })(),
   $(function () {
