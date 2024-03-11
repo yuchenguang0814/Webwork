@@ -8609,6 +8609,7 @@ body.top .top_visual__content__body {
   }
 }
 body.top .top_visual__content__lead {
+  display: none;
   font-size: 6rem;
   color: #fff;
   font-weight: 400;
@@ -9092,6 +9093,9 @@ body.top .top_recruit__thumb img {
 }
 body.top .top_company {
   position: relative;
+}
+body.top .top_company .link_thumb__thumb {
+  border-radius: 5px;
 }
 @media all and (max-width: 767px) {
   body.top .top_company {

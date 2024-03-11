@@ -15,7 +15,7 @@
   height: 60px;
 }
 .site_header.-scrolled .site_header__id_inner h2{
-  display: none;
+  line-height: 60px;
 }
 .top_info  {
   margin-bottom: 120px;
@@ -56,6 +56,10 @@ body.top .top_recruit__body{
   .site_header.-scrolled .site_header__id_inner h2 {
     display: block;
     font-size: 1.5rem;
+    line-height: 45px;
+  }
+  .site_header__id__label {
+    display: none;
   }
   .global_nav__list__item_case .global_nav__child_list__item:last-child a{
     height: 45px;
